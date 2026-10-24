@@ -81,19 +81,6 @@
       ]
     },
     {
-      "source": "eliza-alapanyag/Új_képek/19 2.jpg",
-      "path": "images/nyugalom/arcmasszazs.webp",
-      "width": 810,
-      "height": 1440,
-      "role": "Gondoskodás, privát kezelési élmény",
-      "variants": [
-        {
-          "path": "images/nyugalom/arcmasszazs-480.webp",
-          "width": 480
-        }
-      ]
-    },
-    {
       "source": "eliza-alapanyag/Új_képek/Eliza 2.jpg",
       "path": "images/nyugalom/eliza.webp",
       "width": 549,
@@ -105,6 +92,24 @@
           "width": 480
         }
       ]
+    },
+    {
+      "source": "eliza-alapanyag/Új_képek/36 1.jpg",
+      "path": "images/nyugalom/diagnosztika.webp",
+      "width": 736,
+      "height": 1104,
+      "role": "Gondoskodás szakasz: a Személyesen Eliza elrendezését követő bőrállapot-felmérés",
+      "variants": [
+        {
+          "path": "images/nyugalom/diagnosztika-480.webp",
+          "width": 480
+        }
+      ]
     }
-  ]
+  ],
+  "portrait_display": {
+    "saturate": 1.2,
+    "contrast": 1.14,
+    "brightness": 0.99
+  }
 }

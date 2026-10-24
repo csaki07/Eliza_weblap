@@ -45,6 +45,24 @@
       .treatment .text-link{justify-self:auto}
       .care-image{width:100%;max-width:380px}.care-image img{aspect-ratio:4/5}
     }
+
+    /* A személyes koncepció előnyszekciója, az új fotókészlettel. */
+    #gondoskodas{background:var(--color-brand-surface)}
+    #gondoskodas .benefit-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:90px;align-items:center}
+    #gondoskodas .gold-line{display:block;width:56px;height:1px;background:var(--color-brand-accent);margin-bottom:28px}
+    #gondoskodas .intro-text>p{margin-top:24px}
+    #gondoskodas .benefit-image{display:block;margin-top:36px;width:100%;max-width:430px;aspect-ratio:1/1;object-fit:cover;object-position:50% 60%;border-radius:16px}
+    #gondoskodas .reasons{display:grid;gap:27px}
+    #gondoskodas .reason{padding-bottom:26px;border-bottom:1px solid #dbcac0;display:grid;grid-template-columns:32px 1fr;gap:16px}
+    #gondoskodas .reason:last-child{padding-bottom:0;border:0}
+    #gondoskodas .reason svg{width:25px;height:25px;stroke:var(--color-brand-primary);fill:none;stroke-width:1.2;margin-top:5px}
+    #gondoskodas .reason h3{font-size:26px;margin-bottom:9px}
+    #gondoskodas .reason p{color:var(--color-brand-muted);font-size:16px}
+    #gondoskodas .reason .small{font-size:12px;margin-top:8px}
+    .about .portrait img{filter:saturate(1.2) contrast(1.14) brightness(.99)}
+    @media(max-width:1050px){#gondoskodas .benefit-grid{gap:52px}}
+    @media(max-width:800px){#gondoskodas .benefit-grid{gap:40px}#gondoskodas .reasons{gap:20px}#gondoskodas .reason{gap:10px;grid-template-columns:25px 1fr}#gondoskodas .reason h3{font-size:25px}#gondoskodas .reason p{font-size:15px}}
+    @media(max-width:640px){#gondoskodas .benefit-grid{grid-template-columns:1fr;gap:36px}#gondoskodas .benefit-image{max-width:100%;margin-top:28px;aspect-ratio:4/3;object-position:50% 65%}#gondoskodas .reasons{gap:24px}#gondoskodas .reason{grid-template-columns:29px 1fr;gap:14px}#gondoskodas .reason h3{font-size:27px}}
   </style>
 </head>
 <body>
@@ -82,17 +100,7 @@
         </div>
       </div>
     </section>
-    <section class="section care" id="gondoskodas" aria-labelledby="care-title"><div class="wrap">
-      <div class="care-layout"><div><p class="overline">A kezelésen túl is figyelek rád</p><h2 id="care-title">Bízd magad<br>szakértő kezekre</h2><p class="care-intro">Gondosan kiválasztott hatóanyagokkal és a bőrödre szabott kezelési tervvel dolgozom. Közben van idő lelassulni is.</p>
-        <div class="care-points">
-          <div class="care-point"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><div><h3>A bőrtípusodhoz igazodok</h3><p>Aktuális bőrállapotod és arcápolási szokásaid alapján állítom össze a kezelési tervedet.</p></div></div>
-          <div class="care-point"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><div><h3>Kíméletes megközelítés</h3><p>A megfelelő eljárásról és a kezelés menetéről személyesen egyeztetünk.</p></div></div>
-          <div class="care-point"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><div><h3>Nyugalom és személyes figyelem</h3><p>Minden kezelés privát. Ez az idő a bőrödnek és a feltöltődésednek szól.</p></div></div>
-        </div><a href="#idopont" class="text-link">Időpontot kérek</a></div>
-        <figure class="care-image"><img src="images/nyugalom/arcmasszazs.webp" srcset="images/nyugalom/arcmasszazs-480.webp 480w, images/nyugalom/arcmasszazs.webp 810w" sizes="(max-width:640px) 90vw, 45vw" width="810" height="1440" loading="lazy" decoding="async" alt="Lazító arcmasszázst bemutató hangulatkép"><figcaption>„Hiszem, hogy egy jó kozmetikai kezelés nemcsak a bőrt, hanem a lelket is felfrissíti.”</figcaption></figure>
-      </div>
-      <aside class="guarantee"><h3>Elégedettségi garancia</h3><p>Ha egy 5 alkalmas kezelés után nem vagy elégedett, visszatérítem a díj 50%-át. <span>A garancia végleges feltételeinek pontosítása folyamatban van.</span></p></aside>
-    </div></section>
+    <section class="section benefits" id="gondoskodas" aria-labelledby="care-title"><div class="wrap benefit-grid"><div class="intro-text"><span class="gold-line" aria-hidden="true"></span><h2 id="care-title">Bízd magad<br>szakértő kezekre.</h2><p class="muted">Nálam minden kezelés azzal kezdődik, hogy figyelek rád. A bőrödre, a szokásaidra és arra, hogy mire vágysz.</p><img class="benefit-image" src="images/nyugalom/diagnosztika.webp" srcset="images/nyugalom/diagnosztika-480.webp 480w, images/nyugalom/diagnosztika.webp 736w" sizes="(max-width:640px) 90vw, 38vw" width="736" height="1104" loading="lazy" decoding="async" alt="Bőrállapot-felmérést szemléltető hangulatkép"></div><div class="reasons"><article class="reason"><svg aria-hidden="true" viewBox="0 0 32 32"><path d="M16 3c-3 6-10 13-10 18a10 10 0 0 0 20 0C26 16 19 9 16 3Z"/><path d="M11 21a5 5 0 0 0 5 5"/></svg><div><h3>A bőrtípusodhoz igazodom</h3><p>A bőröd aktuális állapota és arcápolási szokásaid alapján állítom össze az egyéni kezelési tervet.</p></div></article><article class="reason"><svg aria-hidden="true" viewBox="0 0 32 32"><path d="M16 28V13M16 21C4 21 4 7 4 7s12 0 12 14ZM16 16C27 16 28 3 28 3S16 3 16 16Z"/></svg><div><h3>Kíméletes megközelítés</h3><p>Gondosan kiválasztott hatóanyagokkal és a bőröd igényeihez illő eljárásokkal dolgozom.</p></div></article><article class="reason"><svg aria-hidden="true" viewBox="0 0 32 32"><path d="M5 27V12L16 4l11 8v15H5ZM12 27V17h8v10"/></svg><div><h3>Ez az idő csak a tiéd</h3><p>Privát, nyugodt környezetben fogadlak. A kezelés egyben alkalom arra is, hogy kicsit megállj és feltöltődj.</p></div></article><article class="reason"><svg aria-hidden="true" viewBox="0 0 32 32"><path d="m16 3 11 5v9c0 6-11 12-11 12S5 23 5 17V8l11-5Z"/><path d="m10 16 4 4 8-9"/></svg><div><h3>Elégedettségi garancia</h3><p>Ha egy 5 alkalmas kúra után nem vagy elégedett, a díj 50%-át visszatérítem.</p><p class="small">A garancia végleges, részletes feltételei egyeztetés alatt állnak.</p></div></article></div></div></section>
     <section class="section about" id="eliza" aria-labelledby="about-title"><div class="wrap about-layout">
       <figure class="portrait"><img src="images/nyugalom/eliza.webp" srcset="images/nyugalom/eliza-480.webp 480w, images/nyugalom/eliza.webp 549w" sizes="(max-width:640px) 256px, 356px" width="549" height="732" loading="lazy" decoding="async" alt="Sipos Eliza mesterkozmetikus portréja"></figure>
       <div><p class="overline">Ismerd meg a szakértődet</p><h2 id="about-title">Szia, Eliza vagyok,<br>a leendő kozmetikusod.</h2><p class="muted">A szépség mindig is az életem része volt. 2011-ben megnyitottam saját szalonomat, ahol azóta is azon dolgozom, hogy vendégeim bőre megkapja a neki megfelelő törődést.</p><p class="muted">A Beauty Academy szakmai trénereként és mesterkozmetikusként fontos számomra a folyamatos fejlődés. Nálam nincs sablonkezelés: megismerlek téged, a bőrödet és azt, amire valóban szükséged van.</p><p class="signature">Sipos Eliza</p><p class="credentials">Mesterkozmetikus · Az Eliza Beauty Salon alapítója</p></div>
