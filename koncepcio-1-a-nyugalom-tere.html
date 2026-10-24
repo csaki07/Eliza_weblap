@@ -63,6 +63,17 @@
     @media(max-width:1050px){#gondoskodas .benefit-grid{gap:52px}}
     @media(max-width:800px){#gondoskodas .benefit-grid{gap:40px}#gondoskodas .reasons{gap:20px}#gondoskodas .reason{gap:10px;grid-template-columns:25px 1fr}#gondoskodas .reason h3{font-size:25px}#gondoskodas .reason p{font-size:15px}}
     @media(max-width:640px){#gondoskodas .benefit-grid{grid-template-columns:1fr;gap:36px}#gondoskodas .benefit-image{max-width:100%;margin-top:28px;aspect-ratio:4/3;object-position:50% 65%}#gondoskodas .reasons{gap:24px}#gondoskodas .reason{grid-template-columns:29px 1fr;gap:14px}#gondoskodas .reason h3{font-size:27px}}
+
+    /* Egyetlen kezelési kép balra, az eredeti főüzenet jobbra. */
+    .hero-split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding-top:64px;text-align:left}
+    .hero-single-photo{margin:0;overflow:hidden;border-radius:16px;background:var(--color-brand-surface)}
+    .hero-single-photo img{display:block;width:100%;height:590px;object-fit:cover;object-position:50% 64%}
+    .hero-split h1{font-size:clamp(44px,4.45vw,64px);max-width:none;margin:0;line-height:1.04}
+    .hero-split .intro{max-width:540px;margin:28px 0 32px}
+    .hero-split .actions{justify-content:flex-start;gap:16px}
+    .hero-split .overline{max-width:100%;font-size:13px}
+    @media(max-width:1050px){.hero-split{gap:36px}.hero-single-photo img{height:540px}.hero-split h1{font-size:48px}}
+    @media(max-width:800px){.hero-split{grid-template-columns:1fr;gap:36px;padding-top:32px}.hero-single-photo img{height:auto;aspect-ratio:1/1;object-position:50% 64%}.hero-split .hero-copy{max-width:600px}.hero-split h1{font-size:clamp(42px,6.5vw,54px)}.hero-split .intro{margin:24px 0}.hero-split .actions{align-items:flex-start}.hero-split .overline{font-size:12px}}
   </style>
 </head>
 <body>
@@ -78,17 +89,12 @@
     <nav class="mobile-nav" id="mobile-menu" aria-label="Mobil navigáció" hidden><a href="#fooldal">Főoldal</a><a href="#kezelesek">Kezelések</a><a href="#eliza">Rólunk</a><a href="#idopont">Kapcsolat</a><a class="btn" href="#idopont">Időpontot kérek</a></nav>
   </header>
   <main id="tartalom">
-    <section class="hero wrap center" id="fooldal" aria-labelledby="hero-title">
-      <p class="overline">Személyes figyelem. Szakértő gondoskodás.</p>
+    <section class="hero hero-split wrap" id="fooldal" aria-labelledby="hero-title">
+      <figure class="hero-single-photo"><img src="images/nyugalom/kezeles.webp" srcset="images/nyugalom/kezeles-480.webp 480w, images/nyugalom/kezeles.webp 832w" sizes="(max-width:800px) 90vw, 46vw" width="832" height="1248" alt="Nyugodt arckezelés meleg fényű környezetben" fetchpriority="high" decoding="async"></figure>
+      <div class="hero-copy"><p class="overline">Személyes figyelem. Szakértő gondoskodás.</p>
       <h1 id="hero-title">Személyre szabott<br>kozmetikai kezelések</h1>
       <p class="intro">Egy kis idő, ami csak rólad szól. Bőröd igényeire hangolt kezelésekkel és nyugodt, privát környezettel várlak Budapesten.</p>
-      <div class="actions"><a href="#idopont" class="btn">Időpontot kérek</a><a href="#kezelesek" class="btn btn-outline">Megnézem a kezeléseket</a></div>
-      <div class="hero-gallery" aria-label="A személyre szabott bőrápolás pillanatai">
-        <figure class="hero-side hero-detail"><img src="images/nyugalom/szerum.webp" srcset="images/nyugalom/szerum-480.webp 480w, images/nyugalom/szerum.webp 736w" sizes="(max-width:640px) 45vw, 27vw" width="736" height="1104" alt="Szérum felvitele az arcbőrre, közelről" decoding="async"></figure>
-        <figure class="hero-main"><img src="images/nyugalom/kezeles.webp" srcset="images/nyugalom/kezeles-480.webp 480w, images/nyugalom/kezeles.webp 832w" sizes="(max-width:640px) 90vw, 43vw" width="832" height="1248" alt="Nyugodt arckezelés meleg fényű környezetben" fetchpriority="high" decoding="async"></figure>
-        <figure class="hero-side hero-rest"><img src="images/nyugalom/enido.webp" srcset="images/nyugalom/enido-480.webp 480w, images/nyugalom/enido.webp 848w" sizes="(max-width:640px) 45vw, 27vw" width="848" height="1264" alt="Kozmetikai ápolás közben pihenő nő" decoding="async"></figure>
-      </div>
-      <div class="photo-note"><span>Bőrödnek törődés. Neked énidő.</span><span>Bőrápolási hangulatképek</span></div>
+      <div class="actions"><a href="#idopont" class="btn">Időpontot kérek</a><a href="#kezelesek" class="btn btn-outline">Megnézem a kezeléseket</a></div></div>
     </section>
     <section class="section treatments" id="kezelesek" aria-labelledby="treatments-title">
       <div class="wrap">

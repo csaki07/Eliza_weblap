@@ -3,19 +3,6 @@
   "source_folder": "eliza-alapanyag/Új_képek",
   "images": [
     {
-      "source": "eliza-alapanyag/Új_képek/17 1.jpg",
-      "path": "images/nyugalom/szerum.webp",
-      "width": 736,
-      "height": 1104,
-      "role": "Hero, hatóanyag-részlet",
-      "variants": [
-        {
-          "path": "images/nyugalom/szerum-480.webp",
-          "width": 480
-        }
-      ]
-    },
-    {
       "source": "eliza-alapanyag/Új_képek/23 1.jpg",
       "path": "images/nyugalom/kezeles.webp",
       "width": 832,
@@ -24,19 +11,6 @@
       "variants": [
         {
           "path": "images/nyugalom/kezeles-480.webp",
-          "width": 480
-        }
-      ]
-    },
-    {
-      "source": "eliza-alapanyag/Új_képek/33 1.jpg",
-      "path": "images/nyugalom/enido.webp",
-      "width": 848,
-      "height": 1264,
-      "role": "Hero, nyugodt arcápolási élmény",
-      "variants": [
-        {
-          "path": "images/nyugalom/enido-480.webp",
           "width": 480
         }
       ]
@@ -111,5 +85,6 @@
     "saturate": 1.2,
     "contrast": 1.14,
     "brightness": 0.99
-  }
+  },
+  "hero_layout": "single-image-left-text-right"
 }

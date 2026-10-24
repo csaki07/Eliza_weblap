@@ -132,7 +132,7 @@ A felhasználó 2026. október 24-én jóváhagyta a teljes briefet. A szakaszso
 
 A felhasználó az első irányt (A nyugalom tere) választotta, és az `eliza-alapanyag/Új_képek/` mappát adta meg az átdolgozás képforrásaként. Ebben az irányban ez a készlet felváltja a korábbi PNG hangulatképeket és portrét. A többi koncepció változatlan referencia marad.
 
-- A nyitás három képből áll: szérumrészlet (`17 1.jpg`), központi kezelési jelenet (`23 1.jpg`) és nyugodt arcápolási élmény (`33 1.jpg`). Mobilon a központi kép kerül felülre, alá a két kisebb részlet.
+- A nyitásban egyetlen kép szerepel: a felhasználó által kiválasztott kezelési jelenet (`23 1.jpg`). Asztali nézetben balra a kép, jobbra a meglévő főcím, bevezető és gombok; mobilon a kép után a szöveg következik.
 - A kezelési ajánlók saját fotókat kapnak: `22 1.jpg`, `19 1.jpg`, `28 1.jpg`. Ezek a kezelés jellegét szemléltetik, nem eredményt vagy konkrét termékmárkát igazolnak.
 - A személyes gondoskodás szakasz a Személyesen Eliza koncepció elrendezését követi: bal oldalon cím, bevezető és bőrállapot-felmérési kép (`36 1.jpg`), jobb oldalon négy ikonozott előny, köztük a garancia.
 - Eliza bemutatkozásához az új készlet `Eliza 2.jpg` portréja használatos, a megjelenítésnél finoman emelt színtelítettséggel és kontraszttal.
