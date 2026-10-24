@@ -30,3 +30,9 @@ A menük a megfelelő kezdőoldali szakaszokra vezetnek. A végleges külön alo
 - `qa/report.json`, `qa/interactions.json`, `qa/*.png`: helyi ellenőrzési eredmények és képernyőképek, Gitből kihagyva.
 
 A szkriptek a jelenlegi gépen telepített Playwrightot és Chrome-ot használják; másik gépen az elérési utak módosítandók.
+
+## Az első irány új képkészlete
+
+A felhasználó választása után az első koncepció képhasználata az `Új_képek` mappa alapján átdolgozva. Nyolc forráskép, teljes és 480 px széles WebP változatokkal; összesen kb. 722 KiB. A nyitókompozíció, a három kezelési ajánló, a gondoskodás képe és a portré frissült. A választóoldal első előnézete is az új képkészletből dolgozik.
+
+Az érintett első koncepció és a választóoldal újra ellenőrizve 1440, 768 és 375 px szélességen: a képek és fontok betöltődnek, nincsenek hiányzó horgonyok, JavaScript-hibák vagy vízszintes túlcsordulások. Az asztali és mobil vágások képernyőképeken is ellenőrizve.

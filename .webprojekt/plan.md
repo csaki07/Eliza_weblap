@@ -116,3 +116,8 @@ A külső fontokhoz és a Tailwind Play CDN-hez internetkapcsolat szükséges. A
 ## Jóváhagyás
 
 A felhasználó mindhárom konkrét irányt és a megvalósítási tervet jóváhagyta. A prototípusok megépítése engedélyezett.
+
+
+## Kiválasztott irány és képi átdolgozás
+
+A felhasználó az első irányt választotta. Az `eliza-alapanyag/Új_képek/` új készlete alapján háromképes hero, képes kezelési ajánlók, új gondoskodási fotó és új Eliza-portré készült. Az aktuális képkiosztást a brief frissítése és a `nyugalom-kephasznalat.json` rögzíti; ezek az első irány korábbi képi javaslatát felváltják.

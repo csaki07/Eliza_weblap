@@ -2,5 +2,8 @@
   "phase": "prototypes_complete",
   "direction_count": 3,
   "is_redesign": false,
-  "source_url": null
+  "source_url": null,
+  "selected_direction": 1,
+  "selected_direction_name": "A nyugalom tere",
+  "image_source": "eliza-alapanyag/Új_képek"
 }

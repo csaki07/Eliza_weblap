@@ -4,7 +4,7 @@
       "id": 1,
       "slug": "a-nyugalom-tere",
       "name": "A nyugalom tere",
-      "description": "Tágas, fotóközpontú nyitás: középre zárt cím és gombok, alatta nagy széles kezelési kép. Levegős, luxus szalonélmény, kevés kártya.",
+      "description": "Tágas, középre zárt nyitás három, az új képkészletből válogatott fotóval. A nagy központi kezelési jelenetet hatóanyag-részlet és nyugodt arcápolási élmény kíséri. A kezelések önálló képeket kapnak.",
       "rationale": "A nyugodt privát énidő élményét helyezi előtérbe.",
       "palette": {
         "primary": "#8E4A5A",
@@ -29,7 +29,7 @@
       "contrast_axes": {
         "density": "spacious",
         "typography": "image-led centered",
-        "hero": "wide-image",
+        "hero": "centered photographic triptych",
         "visual_metaphor": "retreat"
       }
     },
@@ -100,5 +100,6 @@
       }
     }
   ],
-  "total": 3
+  "total": 3,
+  "selected_direction": 1
 }

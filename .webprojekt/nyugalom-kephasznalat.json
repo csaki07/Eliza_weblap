@@ -1,0 +1,110 @@
+{
+  "selected_direction": 1,
+  "source_folder": "eliza-alapanyag/Új_képek",
+  "images": [
+    {
+      "source": "eliza-alapanyag/Új_képek/17 1.jpg",
+      "path": "images/nyugalom/szerum.webp",
+      "width": 736,
+      "height": 1104,
+      "role": "Hero, hatóanyag-részlet",
+      "variants": [
+        {
+          "path": "images/nyugalom/szerum-480.webp",
+          "width": 480
+        }
+      ]
+    },
+    {
+      "source": "eliza-alapanyag/Új_képek/23 1.jpg",
+      "path": "images/nyugalom/kezeles.webp",
+      "width": 832,
+      "height": 1248,
+      "role": "Hero, központi kezelési hangulatkép",
+      "variants": [
+        {
+          "path": "images/nyugalom/kezeles-480.webp",
+          "width": 480
+        }
+      ]
+    },
+    {
+      "source": "eliza-alapanyag/Új_képek/33 1.jpg",
+      "path": "images/nyugalom/enido.webp",
+      "width": 848,
+      "height": 1264,
+      "role": "Hero, nyugodt arcápolási élmény",
+      "variants": [
+        {
+          "path": "images/nyugalom/enido-480.webp",
+          "width": 480
+        }
+      ]
+    },
+    {
+      "source": "eliza-alapanyag/Új_képek/22 1.jpg",
+      "path": "images/nyugalom/borfiatalitas.webp",
+      "width": 832,
+      "height": 1248,
+      "role": "Kezelések, gépi arckezelés",
+      "variants": [
+        {
+          "path": "images/nyugalom/borfiatalitas-480.webp",
+          "width": 480
+        }
+      ]
+    },
+    {
+      "source": "eliza-alapanyag/Új_képek/19 1.jpg",
+      "path": "images/nyugalom/hidratalas.webp",
+      "width": 736,
+      "height": 1313,
+      "role": "Kezelések, ápoló maszk felvitele",
+      "variants": [
+        {
+          "path": "images/nyugalom/hidratalas-480.webp",
+          "width": 480
+        }
+      ]
+    },
+    {
+      "source": "eliza-alapanyag/Új_képek/28 1.jpg",
+      "path": "images/nyugalom/borallapot.webp",
+      "width": 848,
+      "height": 1264,
+      "role": "Kezelések, bőrállapot megfigyelése",
+      "variants": [
+        {
+          "path": "images/nyugalom/borallapot-480.webp",
+          "width": 480
+        }
+      ]
+    },
+    {
+      "source": "eliza-alapanyag/Új_képek/19 2.jpg",
+      "path": "images/nyugalom/arcmasszazs.webp",
+      "width": 810,
+      "height": 1440,
+      "role": "Gondoskodás, privát kezelési élmény",
+      "variants": [
+        {
+          "path": "images/nyugalom/arcmasszazs-480.webp",
+          "width": 480
+        }
+      ]
+    },
+    {
+      "source": "eliza-alapanyag/Új_képek/Eliza 2.jpg",
+      "path": "images/nyugalom/eliza.webp",
+      "width": 549,
+      "height": 732,
+      "role": "Sipos Eliza bemutatkozása",
+      "variants": [
+        {
+          "path": "images/nyugalom/eliza-480.webp",
+          "width": 480
+        }
+      ]
+    }
+  ]
+}

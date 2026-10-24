@@ -127,3 +127,15 @@ Az alábbiakban elkülönül az ügyfél ízlése és a webes ellenőrzésből l
 
 ## Jóváhagyás
 A felhasználó 2026. október 24-én jóváhagyta a teljes briefet. A szakaszsorrend, a CTA-szövegek és a szerkesztési irányok a további munka alapját képezik. A tartalom-leltárban jelzett pótlások és pontosítások továbbra is nyitott feladatok. A tervezés lezárt állapotát a `state.json` rögzíti.
+
+## Képhasználat frissítése a koncepcióválasztás után
+
+A felhasználó az első irányt (A nyugalom tere) választotta, és az `eliza-alapanyag/Új_képek/` mappát adta meg az átdolgozás képforrásaként. Ebben az irányban ez a készlet felváltja a korábbi PNG hangulatképeket és portrét. A többi koncepció változatlan referencia marad.
+
+- A nyitás három képből áll: szérumrészlet (`17 1.jpg`), központi kezelési jelenet (`23 1.jpg`) és nyugodt arcápolási élmény (`33 1.jpg`). Mobilon a központi kép kerül felülre, alá a két kisebb részlet.
+- A kezelési ajánlók saját fotókat kapnak: `22 1.jpg`, `19 1.jpg`, `28 1.jpg`. Ezek a kezelés jellegét szemléltetik, nem eredményt vagy konkrét termékmárkát igazolnak.
+- A személyes gondoskodás szakasz képe `19 2.jpg`.
+- Eliza bemutatkozásához az új készlet `Eliza 2.jpg` portréja használatos.
+- A képek következetes, finom lekerekítést kapnak az oldal stílusában; nincs szükség a régi, képbe épített maszkokhoz igazodásra. A vágások megtartják a fontos arcokat, kezeket és kezelési részleteket.
+- Az eredeti fájlok változatlanok maradnak. A felületen kisebb WebP változatok és reszponzív képméretek töltődnek az `images/nyugalom/` mappából.
+- A pontos forrás–felhasználás megfeleltetés: `.webprojekt/nyugalom-kephasznalat.json`.
