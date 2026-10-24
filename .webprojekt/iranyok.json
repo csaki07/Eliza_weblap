@@ -1,0 +1,104 @@
+{
+  "directions": [
+    {
+      "id": 1,
+      "slug": "a-nyugalom-tere",
+      "name": "A nyugalom tere",
+      "description": "Tágas, fotóközpontú nyitás: középre zárt cím és gombok, alatta nagy széles kezelési kép. Levegős, luxus szalonélmény, kevés kártya.",
+      "rationale": "A nyugodt privát énidő élményét helyezi előtérbe.",
+      "palette": {
+        "primary": "#8E4A5A",
+        "secondary": "#6E3644",
+        "accent": "#C9A27E",
+        "bg": "#FAF6F2",
+        "surface": "#F1E6DF",
+        "text": "#2E2626",
+        "muted": "#6B5F5C"
+      },
+      "fonts": {
+        "heading": {
+          "family": "Cormorant Garamond",
+          "fallback": "Georgia, serif"
+        },
+        "body": {
+          "family": "Jost",
+          "fallback": "system-ui, sans-serif"
+        },
+        "google_fonts_url": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@400;500&display=swap"
+      },
+      "contrast_axes": {
+        "density": "spacious",
+        "typography": "image-led centered",
+        "hero": "wide-image",
+        "visual_metaphor": "retreat"
+      }
+    },
+    {
+      "id": 2,
+      "slug": "szemelyesen-eliza",
+      "name": "Személyesen Eliza",
+      "description": "Aszimmetrikus osztott nyitás: balra személyes megszólítás és CTA, jobbra Eliza portréja natív felbontásához illő méretben. Váltakozó szöveg-kép szakaszok.",
+      "rationale": "A személyes szakértői kapcsolat és Eliza gondoskodása épít bizalmat.",
+      "palette": {
+        "primary": "#8E4A5A",
+        "secondary": "#6E3644",
+        "accent": "#C9A27E",
+        "bg": "#FAF6F2",
+        "surface": "#F1E6DF",
+        "text": "#2E2626",
+        "muted": "#6B5F5C"
+      },
+      "fonts": {
+        "heading": {
+          "family": "Cormorant Garamond",
+          "fallback": "Georgia, serif"
+        },
+        "body": {
+          "family": "Jost",
+          "fallback": "system-ui, sans-serif"
+        },
+        "google_fonts_url": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@400;500&display=swap"
+      },
+      "contrast_axes": {
+        "density": "balanced",
+        "typography": "personal fine hierarchy",
+        "hero": "portrait split-screen",
+        "visual_metaphor": "personal studio"
+      }
+    },
+    {
+      "id": 3,
+      "slug": "a-borodre-hangolva",
+      "name": "A bőrödre hangolva",
+      "description": "Nagy, balra zárt tipográfiai nyitás, három bőrigény szerinti eligazítással. Kezelések képpel kísért vízszintes sorokban. Strukturált, olvasható információ.",
+      "rationale": "Segít annak, aki a bőrigényét ismeri, de a kezelések nevét még nem.",
+      "palette": {
+        "primary": "#8E4A5A",
+        "secondary": "#6E3644",
+        "accent": "#C9A27E",
+        "bg": "#FAF6F2",
+        "surface": "#F1E6DF",
+        "text": "#2E2626",
+        "muted": "#6B5F5C"
+      },
+      "fonts": {
+        "heading": {
+          "family": "Cormorant Garamond",
+          "fallback": "Georgia, serif"
+        },
+        "body": {
+          "family": "Jost",
+          "fallback": "system-ui, sans-serif"
+        },
+        "google_fonts_url": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@400;500&display=swap"
+      },
+      "contrast_axes": {
+        "density": "structured",
+        "typography": "bold hierarchy",
+        "hero": "typographic needs-led",
+        "visual_metaphor": "guided consultation"
+      }
+    }
+  ],
+  "total": 3
+}
