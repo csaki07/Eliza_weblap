@@ -58,7 +58,7 @@ Mindkettő ingyenes, a Google Fontsról tölthető be, és van benne magyar éke
 - **Elsődleges gomb:** rózsafa háttér, fehér szöveg, 16px × 32px belső térköz, 999px lekerekítés (kapszula). Hoverre sötét rózsafa.
 - **Másodlagos gomb:** átlátszó háttér, 1px rózsafa keret, rózsafa szöveg, ugyanaz a forma.
 - **Kártya:** púder vagy fehér háttér, 16px lekerekítés, nincs vagy csak nagyon halvány árnyék.
-- **Képek:** 16px lekerekítés; meleg, természetes fényű fotók, sok bőrtónussal, krém és bézs környezettel.
+- **Képek:** 8px lekerekítés minden oldalon (felhasználói módosítás); meleg, természetes fényű fotók, sok bőrtónussal, krém és bézs környezettel.
 - **Űrlapmező:** fehér háttér, 1px halvány púder keret, 12px lekerekítés, fókuszra rózsafa keret.
 - **Ikonok:** vékony vonalas ikonkészlet (például Lucide vagy Phosphor Light), rózsafa vagy homokarany színben.
 

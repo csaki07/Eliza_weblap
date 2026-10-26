@@ -68,14 +68,14 @@
       ]
     },
     {
-      "source": "eliza-alapanyag/Új_képek/36 1.jpg",
-      "path": "images/nyugalom/diagnosztika.webp",
+      "source": "eliza-alapanyag/Új_képek/35 1.jpg",
+      "path": "images/nyugalom/arctervezes.webp",
       "width": 736,
-      "height": 1104,
+      "height": 981,
       "role": "Gondoskodás szakasz: a Személyesen Eliza elrendezését követő bőrállapot-felmérés",
       "variants": [
         {
-          "path": "images/nyugalom/diagnosztika-480.webp",
+          "path": "images/nyugalom/arctervezes-480.webp",
           "width": 480
         }
       ]
@@ -86,5 +86,5 @@
     "contrast": 1.14,
     "brightness": 0.99
   },
-  "hero_layout": "single-image-left-text-right"
+  "hero_layout": "text-left-image-right-with-fade"
 }

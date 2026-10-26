@@ -132,10 +132,50 @@ A felhasználó 2026. október 24-én jóváhagyta a teljes briefet. A szakaszso
 
 A felhasználó az első irányt (A nyugalom tere) választotta, és az `eliza-alapanyag/Új_képek/` mappát adta meg az átdolgozás képforrásaként. Ebben az irányban ez a készlet felváltja a korábbi PNG hangulatképeket és portrét. A többi koncepció változatlan referencia marad.
 
-- A nyitásban egyetlen kép szerepel: a felhasználó által kiválasztott kezelési jelenet (`23 1.jpg`). Asztali nézetben balra a kép, jobbra a meglévő főcím, bevezető és gombok; mobilon a kép után a szöveg következik.
+- A nyitásban egyetlen kép szerepel: a felhasználó által kiválasztott kezelési jelenet (`23 1.jpg`). Asztali nézetben balra a meglévő főcím, bevezető és gombok, jobbra a kép. A fotó a szöveg felőli szélén áttűnik az oldal hátterébe. Mobilon a szöveg után következik a kép, felül finom áttűnéssel.
 - A kezelési ajánlók saját fotókat kapnak: `22 1.jpg`, `19 1.jpg`, `28 1.jpg`. Ezek a kezelés jellegét szemléltetik, nem eredményt vagy konkrét termékmárkát igazolnak.
 - A személyes gondoskodás szakasz a Személyesen Eliza koncepció elrendezését követi: bal oldalon cím, bevezető és bőrállapot-felmérési kép (`36 1.jpg`), jobb oldalon négy ikonozott előny, köztük a garancia.
 - Eliza bemutatkozásához az új készlet `Eliza 2.jpg` portréja használatos, a megjelenítésnél finoman emelt színtelítettséggel és kontraszttal.
 - A képek következetes, finom lekerekítést kapnak az oldal stílusában; nincs szükség a régi, képbe épített maszkokhoz igazodásra. A vágások megtartják a fontos arcokat, kezeket és kezelési részleteket.
 - Az eredeti fájlok változatlanok maradnak. A felületen kisebb WebP változatok és reszponzív képméretek töltődnek az `images/nyugalom/` mappából.
 - A pontos forrás–felhasználás megfeleltetés: `.webprojekt/nyugalom-kephasznalat.json`.
+
+
+### Közös képsarok-szabály
+
+A felhasználó kérésére minden oldal minden képe egységesen 8 px lekerekítést kap. A kiválasztott Hero-kép bal széli áttűnése a képszélesség 30%-ánál ér teljes fedettségre.
+
+
+### Részletmódosítások a böngészős megjegyzések alapján
+
+A kiválasztott kezdőoldalon kisebb szakasztérközök, másodlagos kezelési és GYIK-gombok, keret nélküli és a háttérhez illesztett Eliza-portré, vonalak nélküli kompaktabb idézetek, kör nélküli lépésszámok és feliratvonal nélküli kapcsolatfelvétel szerepel. A hamburger menüben nincs külön időpontkérő gomb; a desktop fejléc gombja 24 px-rel beljebb kerül. A keskenyebb menüsáv görgetéskor világos hátteret kap, a Hero-kép jobb felső sarka szögletes.
+
+
+### Aktuális vélemény-, folyamat- és térközkezelés
+
+A vélemények púder hátterű, lekerekített kártyák, a nagy külön idézőjelek nélkül, név előtti rövid vonallal. A folyamat bal oldali arcmasszázsképet és jobb oldali függőleges lépéssort kap, összekötött körökben középre igazított számokkal. A felhasználó kérésére a szakaszonként egységes 16 px-es belső térközt visszavontuk; a korábban finomított, szakaszonkénti térközök érvényesek. A kezelések és a gondoskodás címe fölötti díszvonalak nem jelennek meg. Eliza portréja erősebb színtelítettséggel és kontraszttal jelenik meg, háttérbe illesztve. Ez felváltja a korábbi, kör nélküli folyamat- és kártya nélküli véleményváltozatot.
+
+
+### Legutóbbi padding- és gombigazítás
+
+A tartalmi szakaszok felső és alsó paddingje egységes: asztali és táblagépes nézetben 56 px, mobilon 40 px, a megjelölt bemutatkozó szakasz alapján. A Hero menü mögé futó elrendezése külön marad. A szolgáltatási gombok a felhasználó legutóbbi döntése szerint az oszlopaik bal széléhez igazodnak. Ez felváltja a korábbi szakaszonkénti paddingeket és a középre igazított szolgáltatási gombokat.
+
+
+### Aktuális szakaszpadding
+
+Minden szakasz felső és alsó paddingje 80 px minden képernyőméreten. Kivétel a Hero felső paddingje, amely a korábbi elrendezés szerint marad; a Hero alsó paddingje szintén 80 px. Ez felváltja a korábbi 56/40 px-es szabályt.
+
+
+### Legutóbbi részletmódosítás
+
+A Hero alsó paddingje 40 px; a többi szakasz felső és alsó paddingje 80 px marad. A címsorok feletti dekoratív vonalak eltávolítva. A kapcsolatfelvételi telefonszám az e-maillel azonos normál tipográfiát használ.
+
+
+### Aktuális alsó padding-kivételek
+
+A Hero, az Ismerd meg a szakértődet (`#eliza`) és a Jó érzés visszatérni (`#velemenyek`) szakasz alsó paddingje 20 px. A többi paddingérték változatlan.
+
+
+### Animációk
+
+A felhasználó az animáció nélküli verziót választotta. Nincsenek belépő-, görgetési vagy hover-animációk. A menü görgetésre váltó háttere és az interaktív elemek működése megmarad, animált átmenet nélkül.

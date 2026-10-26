@@ -59,7 +59,7 @@
     #gondoskodas .reason h3{font-size:26px;margin-bottom:9px}
     #gondoskodas .reason p{color:var(--color-brand-muted);font-size:16px}
     #gondoskodas .reason .small{font-size:12px;margin-top:8px}
-    .about .portrait img{filter:saturate(1.2) contrast(1.14) brightness(.99)}
+    .about .portrait img{filter:saturate(1.2) contrast(1.14) brightness(1.035)}
     @media(max-width:1050px){#gondoskodas .benefit-grid{gap:52px}}
     @media(max-width:800px){#gondoskodas .benefit-grid{gap:40px}#gondoskodas .reasons{gap:20px}#gondoskodas .reason{gap:10px;grid-template-columns:25px 1fr}#gondoskodas .reason h3{font-size:25px}#gondoskodas .reason p{font-size:15px}}
     @media(max-width:640px){#gondoskodas .benefit-grid{grid-template-columns:1fr;gap:36px}#gondoskodas .benefit-image{max-width:100%;margin-top:28px;aspect-ratio:4/3;object-position:50% 65%}#gondoskodas .reasons{gap:24px}#gondoskodas .reason{grid-template-columns:29px 1fr;gap:14px}#gondoskodas .reason h3{font-size:27px}}
@@ -74,7 +74,190 @@
     .hero-split .overline{max-width:100%;font-size:13px}
     @media(max-width:1050px){.hero-split{gap:36px}.hero-single-photo img{height:540px}.hero-split h1{font-size:48px}}
     @media(max-width:800px){.hero-split{grid-template-columns:1fr;gap:36px;padding-top:32px}.hero-single-photo img{height:auto;aspect-ratio:1/1;object-position:50% 64%}.hero-split .hero-copy{max-width:600px}.hero-split h1{font-size:clamp(42px,6.5vw,54px)}.hero-split .intro{margin:24px 0}.hero-split .actions{align-items:flex-start}.hero-split .overline{font-size:12px}}
-  </style>
+
+    /* Bal oldali főüzenet, jobbra a háttérbe finoman áttűnő fotó. */
+    .hero-split{grid-template-columns:1fr 1.05fr;gap:32px}
+    .hero-split .hero-copy{grid-column:1;grid-row:1;position:relative;z-index:1}
+    .hero-single-photo{grid-column:2;grid-row:1;background:transparent;border-radius:0}
+    .hero-single-photo img{-webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.45) 8%,rgba(0,0,0,.85) 18%,#000 30%);mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.45) 8%,rgba(0,0,0,.85) 18%,#000 30%);object-position:50% 64%}
+    @media(max-width:1050px){.hero-split{gap:24px}}
+    @media(max-width:800px){
+      .hero-split{grid-template-columns:1fr;gap:24px}
+      .hero-split .hero-copy{grid-column:1;grid-row:1}
+      .hero-single-photo{grid-column:1;grid-row:2;border-radius:0}
+      .hero-single-photo img{-webkit-mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.4) 10%,#000 28%);mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.4) 10%,#000 28%)}
+    }
+    .hero-single-photo,.hero-single-photo img{border-radius:0}
+    .hero-copy .overline{text-decoration:none;border:0}
+
+    /* Egységes, 8 px-es képsarkok az összes koncepcióban. */
+    body img{border-radius:8px!important}
+    body .hero-single-photo,body .hero-gallery figure,body .hero-photo,body .visual,
+    body .portrait,body .portrait-wrap,body .about-photo{border-radius:8px}
+    body .portrait::after,body .portrait-wrap::before,body .about-photo::after{border-radius:8px}
+  
+
+    /* A fejlécgomb feliratának optikai függőleges középre igazítása. */
+    .header-inner>.btn{height:48px;min-height:48px;padding:4px 25px 0;line-height:1;align-items:center;justify-content:center}
+
+    /* A fotó a nyitásban a keskenyebb, áttetsző menü mögé fut. */
+    .site-header{background:transparent;border-bottom:1px solid transparent;transition:background-color .2s ease,border-color .2s ease}
+    .header-inner{min-height:76px}
+    .brand img{height:58px;width:112px}.brand{width:112px}
+    .site-header.is-scrolled{background:rgba(250,246,242,.98);border-bottom-color:var(--line)}
+    .hero-split{padding-top:0}
+    .hero-split .hero-copy{padding-top:48px;padding-bottom:24px}
+    .hero-single-photo{margin-top:-76px;position:relative;z-index:0}
+    .hero-single-photo img{height:666px}
+    html{scroll-padding-top:90px}
+    @media(max-width:1050px) and (min-width:801px){.hero-single-photo img{height:616px}}
+    @media(max-width:800px){
+      .site-header{background:var(--color-brand-bg)}
+      .header-inner{min-height:70px}
+      .brand img{height:54px;width:104px}.brand{width:104px}
+      .hero-split{padding-top:20px}
+      .hero-split .hero-copy{padding:0}
+      .hero-single-photo{margin-top:0}
+      .hero-single-photo img{height:auto}
+    }
+
+
+    /* A megjelölt szakaszok térközei és részletei. */
+    #kezelesek{padding-top:48px;padding-bottom:64px}
+    #kezelesek .section-intro{margin-bottom:36px}
+    #kezelesek .treatment-choice{margin-top:24px;font-size:14px;letter-spacing:.045em;text-align:center;max-width:100%;padding:15px 22px}
+    #eliza{padding-top:56px;padding-bottom:40px}
+    #eliza .overline{text-decoration:none;border:0}
+    #eliza .portrait{padding:0}
+    #eliza .portrait::after{display:none}
+    #velemenyek{padding-top:16px;padding-bottom:48px}
+    #velemenyek .quote-mark{line-height:1;height:72px;margin-bottom:12px}
+    #folyamat{padding-top:56px;padding-bottom:64px}
+    .header-inner{min-height:64px}
+    .brand,.brand img{width:96px}.brand img{height:48px}
+    .header-inner>.btn{height:42px;min-height:42px;padding:4px 22px 0}
+    .hero-single-photo{margin-top:-64px}
+    body .hero-single-photo,body .hero-single-photo img{border-top-right-radius:0!important}
+    .hero-single-photo img{height:654px}
+    html{scroll-padding-top:78px}
+    @media(max-width:1050px) and (min-width:801px){.hero-single-photo img{height:604px}}
+    @media(max-width:800px){
+      .header-inner{min-height:60px}.brand,.brand img{width:92px}.brand img{height:46px}
+      .hero-single-photo{margin-top:0}.hero-single-photo img{height:auto}
+    }
+    @media(max-width:640px){
+      #kezelesek{padding-top:32px;padding-bottom:48px}
+      #kezelesek .section-intro{margin-bottom:28px}
+      #eliza{padding-top:40px;padding-bottom:32px}
+      #velemenyek{padding-bottom:32px}
+      #folyamat{padding-top:40px;padding-bottom:48px}
+    }
+
+
+    /* A második megjegyzéskör finomításai. */
+    #kezelesek{padding-top:32px;padding-bottom:40px}
+    #eliza .portrait{background:transparent}
+    #eliza .portrait img{mix-blend-mode:multiply;background:transparent}
+    #velemenyek .quote{border-top:0;padding-top:8px}
+    #velemenyek .quote-mark{font-size:48px;line-height:1;height:48px;margin-bottom:8px}
+    #folyamat .step-number{border:0;border-radius:0;width:auto;height:auto;justify-content:flex-start;margin-bottom:12px;font-size:30px}
+    #folyamat .steps h3{min-height:0;margin-bottom:16px}
+    #folyamat .process-head{margin-bottom:32px}
+    .invitation{padding-block:48px}
+    #hirlevel{padding-block:48px}
+    #gyik .faq-contact{margin-top:24px}
+    #idopont .overline{text-decoration:none;border:0}
+    @media(min-width:901px){.header-inner>.btn{margin-right:24px}}
+    @media(max-width:640px){
+      #kezelesek{padding-top:32px;padding-bottom:32px}
+      .invitation,#hirlevel{padding-block:40px}
+      #folyamat .step-number{width:40px;height:40px;align-items:flex-start;margin:0}
+      #folyamat .steps h3{margin:4px 0 10px}
+    }
+
+
+    /* Egységes 32 px-es tartalomköz a szomszédos szakaszok között. */
+    #velemenyek .quote-grid{gap:28px;align-items:stretch}
+    #velemenyek .quote{background:var(--color-brand-surface);border:0;border-radius:16px;padding:36px 40px;display:flex;flex-direction:column}
+    #velemenyek .quote p{font-size:24px;line-height:1.5}
+    #velemenyek .quote cite{display:flex;align-items:center;gap:16px;margin-top:auto;padding-top:28px;font-style:normal}
+    #velemenyek .quote cite::before{content:'';width:30px;height:1px;background:var(--color-brand-primary)}
+    #folyamat{background:var(--color-brand-bg)}
+    #folyamat .process-timeline{display:grid;grid-template-columns:.9fr 1.25fr;gap:72px;align-items:start}
+    #folyamat .process-rule{display:block;width:56px;height:1px;background:var(--color-brand-accent);margin-bottom:28px}
+    #folyamat .process-introduction h2{font-size:clamp(36px,3.6vw,50px)}
+    #folyamat .process-introduction img{width:100%;max-width:380px;aspect-ratio:4/5;object-fit:cover;object-position:50% 58%;margin-top:32px}
+    #folyamat .steps{display:flex;flex-direction:column;gap:0;margin:0;padding:0}
+    #folyamat .steps li{display:grid;grid-template-columns:48px 1fr;column-gap:24px;position:relative;padding-bottom:32px}
+    #folyamat .steps li:last-child{padding-bottom:0}
+    #folyamat .steps li:not(:last-child)::before{content:'';position:absolute;left:23.5px;top:48px;bottom:0;border-left:1px solid var(--line)}
+    #folyamat .step-number{grid-column:1;grid-row:1/3;display:flex;align-items:center;justify-content:center;box-sizing:border-box;width:48px;height:48px;border:1px solid var(--color-brand-accent);border-radius:50%;margin:0;background:var(--color-brand-bg);font:400 20px/1 var(--font-body);font-variant-numeric:lining-nums tabular-nums}
+    #folyamat .step-number span{display:block;line-height:1;transform:translateY(1px)}
+    #folyamat .steps h3{grid-column:2;min-height:0;margin:8px 0 14px;font-size:28px}
+    #folyamat .steps p{grid-column:2}
+    #eliza .portrait img{filter:saturate(1.4) contrast(1.28) brightness(1.02);mix-blend-mode:multiply}
+    @media(max-width:950px){#folyamat .process-timeline{gap:36px;grid-template-columns:.85fr 1.15fr}#folyamat .steps li{column-gap:18px}#velemenyek .quote{padding:28px}}
+    @media(max-width:700px){#folyamat .process-timeline{grid-template-columns:1fr;gap:32px}#folyamat .process-introduction img{max-width:100%;aspect-ratio:4/3}#folyamat .steps h3{font-size:25px}#velemenyek .quote{padding:26px}#velemenyek .quote p{font-size:23px}}
+
+
+    /* A korábbi szakasztérközök, tisztább címsorok és arányosabb folyamat. */
+    #kezelesek .rule-mark,#gondoskodas .gold-line{display:none}
+    #folyamat .process-timeline{grid-template-columns:minmax(0,.85fr) minmax(0,1.25fr);gap:56px;align-items:center}
+    #folyamat .process-introduction h2{font-size:clamp(34px,3.2vw,46px)}
+    #folyamat .process-introduction img{max-width:320px;aspect-ratio:4/5;margin-top:24px}
+    @media(min-width:701px) and (max-width:950px){
+      #folyamat .process-timeline{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:32px}
+      #folyamat .steps li{padding-bottom:24px;column-gap:16px}
+      #folyamat .steps li:last-child{padding-bottom:0}
+      #folyamat .steps h3{font-size:25px;margin-bottom:10px}
+      #folyamat .steps p{font-size:15px;line-height:1.6}
+    }
+    @media(max-width:700px){#folyamat .process-timeline{grid-template-columns:1fr;gap:32px}#folyamat .process-introduction img{max-width:100%;aspect-ratio:4/3}}
+
+
+    /* Középre igazított kezelési gombok, azonos tér a színhatár két oldalán. */
+    #kezelesek .treatment{display:flex;flex-direction:column;align-items:stretch}
+    #kezelesek .treatment-choice{align-self:center;margin-top:auto}
+    #kezelesek .treatment p{margin-bottom:24px}
+    #kezelesek{padding-bottom:40px}
+    #gondoskodas{padding-top:40px}
+    #gondoskodas .benefit-grid{align-items:start}
+    @media(max-width:640px){#kezelesek{padding-bottom:32px}#gondoskodas{padding-top:32px}#kezelesek .treatment:last-child{padding-bottom:0;border-bottom:0}}
+
+
+    /* Minden szakaszon a mintaként jelölt bemutatkozás 56 px-es térköze. */
+    :root{--section-padding:56px}
+    body main#tartalom>section:not(.hero){padding-top:var(--section-padding);padding-bottom:var(--section-padding)}
+    #kezelesek .treatment-choice{align-self:flex-start}
+    @media(max-width:640px){:root{--section-padding:40px}}
+
+
+    /* Egységes 80 px-es szakaszpadding; a Hero felső elrendezése változatlan. */
+    body main#tartalom>section:not(.hero){padding-top:80px;padding-bottom:80px}
+    body main#tartalom>.hero{padding-bottom:40px}
+
+    /* A telefonszám az e-maillel azonos normál szövegstílust kap. */
+    .contact-data .phone{font-family:inherit;font-size:inherit;font-weight:inherit;line-height:inherit;color:inherit}
+
+    /* A három megjelölt szakasz alsó térköze. */
+    body main#tartalom>.hero,body main#tartalom>section#eliza,body main#tartalom>section#velemenyek{padding-bottom:20px}
+
+    /* Az új fotóval is kiegyensúlyozott kép–szöveg kompozíció. */
+    #gondoskodas .benefit-grid{align-items:center}
+    #gondoskodas .benefit-image{width:100%;max-width:430px;aspect-ratio:1/1;object-fit:cover;object-position:50% 58%}
+    @media(max-width:640px){#gondoskodas .benefit-image{max-width:100%;aspect-ratio:4/3;object-position:50% 58%}}
+
+
+
+    /* A felhasználó végleges választása: animáció nélküli megjelenés. */
+    *,*::before,*::after{animation:none!important;transition:none!important}
+    html{scroll-behavior:auto}
+
+    /* A megjelölt díszvonalak nélkül, egységes kapcsolati adatokkal. */
+    #velemenyek .quote cite::before{content:none;display:none}
+    #folyamat .process-rule,.invitation .rule-mark{display:none}
+    #idopont .contact-data .phone{font-family:var(--font-body);font-size:18px;font-weight:400;line-height:1.65;color:var(--color-brand-text);font-style:normal}
+</style>
 </head>
 <body>
   <a class="skip" href="#tartalom">Ugrás a tartalomhoz</a>
@@ -86,7 +269,7 @@
       <a href="#idopont" class="btn">Időpontot kérek</a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu"><span class="menu-label">Menü</span><span class="menu-icon" aria-hidden="true"><span></span><span></span></span></button>
     </div>
-    <nav class="mobile-nav" id="mobile-menu" aria-label="Mobil navigáció" hidden><a href="#fooldal">Főoldal</a><a href="#kezelesek">Kezelések</a><a href="#eliza">Rólunk</a><a href="#idopont">Kapcsolat</a><a class="btn" href="#idopont">Időpontot kérek</a></nav>
+    <nav class="mobile-nav" id="mobile-menu" aria-label="Mobil navigáció" hidden><a href="#fooldal">Főoldal</a><a href="#kezelesek">Kezelések</a><a href="#eliza">Rólunk</a><a href="#idopont">Kapcsolat</a></nav>
   </header>
   <main id="tartalom">
     <section class="hero hero-split wrap" id="fooldal" aria-labelledby="hero-title">
@@ -98,38 +281,38 @@
     </section>
     <section class="section treatments" id="kezelesek" aria-labelledby="treatments-title">
       <div class="wrap">
-        <div class="section-intro center"><span class="rule-mark" aria-hidden="true"></span><h2 id="treatments-title">Minden bőr egyedi.<br>A törődés is legyen az.</h2><p class="muted">Bőrfiatalítás, mélyhidratálás vagy célzott segítség a problémás bőrnek. Az első találkozáskor együtt találjuk meg, mire van szükséged.</p></div>
+        <div class="section-intro center"><h2 id="treatments-title">Minden bőr egyedi.<br>A törődés is legyen az.</h2><p class="muted">Bőrfiatalítás, mélyhidratálás vagy célzott segítség a problémás bőrnek. Az első találkozáskor együtt találjuk meg, mire van szükséged.</p></div>
         <div class="treatment-grid">
-          <article class="treatment"><img class="treatment-media" src="images/nyugalom/borfiatalitas.webp" srcset="images/nyugalom/borfiatalitas-480.webp 480w, images/nyugalom/borfiatalitas.webp 832w" sizes="(max-width:640px) 90vw, 30vw" width="832" height="1248" loading="lazy" decoding="async" alt="Gépi arckezelést bemutató hangulatkép"><span class="sub">Bőrfiatalítás</span><h3>Természetesen üdébb</h3><p>Mesotica kezelések és személyre szabott hatóanyagok a bőröd változó igényeihez, arcra, nyakra és dekoltázsra.</p><a class="text-link treatment-choice" data-treatment="Bőrfiatalítás" href="#idopont">Erről szeretnék egyeztetni</a></article>
-          <article class="treatment"><img class="treatment-media" src="images/nyugalom/hidratalas.webp" srcset="images/nyugalom/hidratalas-480.webp 480w, images/nyugalom/hidratalas.webp 736w" sizes="(max-width:640px) 90vw, 30vw" width="736" height="1313" loading="lazy" decoding="async" alt="Ápoló maszk felvitele az arcbőrre"><span class="sub">Hidratálás</span><h3>Feltöltő gondoskodás</h3><p>Belico Hydro energy mélyhidratáló kezelés a bőr komfortjáért. A megfelelő ápolást a bőröd állapotához igazítom.</p><a class="text-link treatment-choice" data-treatment="Hidratálás" href="#idopont">Erről szeretnék egyeztetni</a></article>
-          <article class="treatment"><img class="treatment-media" src="images/nyugalom/borallapot.webp" srcset="images/nyugalom/borallapot-480.webp 480w, images/nyugalom/borallapot.webp 848w" sizes="(max-width:640px) 90vw, 30vw" width="848" height="1264" loading="lazy" decoding="async" alt="A bőr állapotának személyes megfigyelését idéző kép"><span class="sub">Problémás bőr</span><h3>Figyelem az egyensúlyra</h3><p>Anti-akné kezelések és érzékeny bőrre szabott Belico ápolás. A közös kiindulópont az alapos bőrállapot-felmérés.</p><a class="text-link treatment-choice" data-treatment="Problémás bőr kezelése" href="#idopont">Erről szeretnék egyeztetni</a></article>
+          <article class="treatment"><img class="treatment-media" src="images/nyugalom/borfiatalitas.webp" srcset="images/nyugalom/borfiatalitas-480.webp 480w, images/nyugalom/borfiatalitas.webp 832w" sizes="(max-width:640px) 90vw, 30vw" width="832" height="1248" loading="lazy" decoding="async" alt="Gépi arckezelést bemutató hangulatkép"><span class="sub">Bőrfiatalítás</span><h3>Természetesen üdébb</h3><p>Mesotica kezelések és személyre szabott hatóanyagok a bőröd változó igényeihez, arcra, nyakra és dekoltázsra.</p><a class="btn btn-outline treatment-choice" data-treatment="Bőrfiatalítás" href="#idopont">Erről szeretnék egyeztetni</a></article>
+          <article class="treatment"><img class="treatment-media" src="images/nyugalom/hidratalas.webp" srcset="images/nyugalom/hidratalas-480.webp 480w, images/nyugalom/hidratalas.webp 736w" sizes="(max-width:640px) 90vw, 30vw" width="736" height="1313" loading="lazy" decoding="async" alt="Ápoló maszk felvitele az arcbőrre"><span class="sub">Hidratálás</span><h3>Feltöltő gondoskodás</h3><p>Belico Hydro energy mélyhidratáló kezelés a bőr komfortjáért. A megfelelő ápolást a bőröd állapotához igazítom.</p><a class="btn btn-outline treatment-choice" data-treatment="Hidratálás" href="#idopont">Erről szeretnék egyeztetni</a></article>
+          <article class="treatment"><img class="treatment-media" src="images/nyugalom/borallapot.webp" srcset="images/nyugalom/borallapot-480.webp 480w, images/nyugalom/borallapot.webp 848w" sizes="(max-width:640px) 90vw, 30vw" width="848" height="1264" loading="lazy" decoding="async" alt="A bőr állapotának személyes megfigyelését idéző kép"><span class="sub">Problémás bőr</span><h3>Figyelem az egyensúlyra</h3><p>Anti-akné kezelések és érzékeny bőrre szabott Belico ápolás. A közös kiindulópont az alapos bőrállapot-felmérés.</p><a class="btn btn-outline treatment-choice" data-treatment="Problémás bőr kezelése" href="#idopont">Erről szeretnék egyeztetni</a></article>
         </div>
       </div>
     </section>
-    <section class="section benefits" id="gondoskodas" aria-labelledby="care-title"><div class="wrap benefit-grid"><div class="intro-text"><span class="gold-line" aria-hidden="true"></span><h2 id="care-title">Bízd magad<br>szakértő kezekre.</h2><p class="muted">Nálam minden kezelés azzal kezdődik, hogy figyelek rád. A bőrödre, a szokásaidra és arra, hogy mire vágysz.</p><img class="benefit-image" src="images/nyugalom/diagnosztika.webp" srcset="images/nyugalom/diagnosztika-480.webp 480w, images/nyugalom/diagnosztika.webp 736w" sizes="(max-width:640px) 90vw, 38vw" width="736" height="1104" loading="lazy" decoding="async" alt="Bőrállapot-felmérést szemléltető hangulatkép"></div><div class="reasons"><article class="reason"><svg aria-hidden="true" viewBox="0 0 32 32"><path d="M16 3c-3 6-10 13-10 18a10 10 0 0 0 20 0C26 16 19 9 16 3Z"/><path d="M11 21a5 5 0 0 0 5 5"/></svg><div><h3>A bőrtípusodhoz igazodom</h3><p>A bőröd aktuális állapota és arcápolási szokásaid alapján állítom össze az egyéni kezelési tervet.</p></div></article><article class="reason"><svg aria-hidden="true" viewBox="0 0 32 32"><path d="M16 28V13M16 21C4 21 4 7 4 7s12 0 12 14ZM16 16C27 16 28 3 28 3S16 3 16 16Z"/></svg><div><h3>Kíméletes megközelítés</h3><p>Gondosan kiválasztott hatóanyagokkal és a bőröd igényeihez illő eljárásokkal dolgozom.</p></div></article><article class="reason"><svg aria-hidden="true" viewBox="0 0 32 32"><path d="M5 27V12L16 4l11 8v15H5ZM12 27V17h8v10"/></svg><div><h3>Ez az idő csak a tiéd</h3><p>Privát, nyugodt környezetben fogadlak. A kezelés egyben alkalom arra is, hogy kicsit megállj és feltöltődj.</p></div></article><article class="reason"><svg aria-hidden="true" viewBox="0 0 32 32"><path d="m16 3 11 5v9c0 6-11 12-11 12S5 23 5 17V8l11-5Z"/><path d="m10 16 4 4 8-9"/></svg><div><h3>Elégedettségi garancia</h3><p>Ha egy 5 alkalmas kúra után nem vagy elégedett, a díj 50%-át visszatérítem.</p><p class="small">A garancia végleges, részletes feltételei egyeztetés alatt állnak.</p></div></article></div></div></section>
+    <section class="section benefits" id="gondoskodas" aria-labelledby="care-title"><div class="wrap benefit-grid"><div class="intro-text"><h2 id="care-title">Bízd magad<br>szakértő kezekre.</h2><p class="muted">Nálam minden kezelés azzal kezdődik, hogy figyelek rád. A bőrödre, a szokásaidra és arra, hogy mire vágysz.</p><img class="benefit-image" src="images/nyugalom/arctervezes.webp" srcset="images/nyugalom/arctervezes-480.webp 480w, images/nyugalom/arctervezes.webp 736w" sizes="(max-width:640px) 90vw, 38vw" width="736" height="981" loading="lazy" decoding="async" alt="Személyre szabott arckezelési tervezést szemléltető hangulatkép"></div><div class="reasons"><article class="reason"><svg aria-hidden="true" viewBox="0 0 32 32"><path d="M16 3c-3 6-10 13-10 18a10 10 0 0 0 20 0C26 16 19 9 16 3Z"/><path d="M11 21a5 5 0 0 0 5 5"/></svg><div><h3>A bőrtípusodhoz igazodom</h3><p>A bőröd aktuális állapota és arcápolási szokásaid alapján állítom össze az egyéni kezelési tervet.</p></div></article><article class="reason"><svg aria-hidden="true" viewBox="0 0 32 32"><path d="M16 28V13M16 21C4 21 4 7 4 7s12 0 12 14ZM16 16C27 16 28 3 28 3S16 3 16 16Z"/></svg><div><h3>Kíméletes megközelítés</h3><p>Gondosan kiválasztott hatóanyagokkal és a bőröd igényeihez illő eljárásokkal dolgozom.</p></div></article><article class="reason"><svg aria-hidden="true" viewBox="0 0 32 32"><path d="M5 27V12L16 4l11 8v15H5ZM12 27V17h8v10"/></svg><div><h3>Ez az idő csak a tiéd</h3><p>Privát, nyugodt környezetben fogadlak. A kezelés egyben alkalom arra is, hogy kicsit megállj és feltöltődj.</p></div></article><article class="reason"><svg aria-hidden="true" viewBox="0 0 32 32"><path d="m16 3 11 5v9c0 6-11 12-11 12S5 23 5 17V8l11-5Z"/><path d="m10 16 4 4 8-9"/></svg><div><h3>Elégedettségi garancia</h3><p>Ha egy 5 alkalmas kúra után nem vagy elégedett, a díj 50%-át visszatérítem.</p></div></article></div></div></section>
     <section class="section about" id="eliza" aria-labelledby="about-title"><div class="wrap about-layout">
       <figure class="portrait"><img src="images/nyugalom/eliza.webp" srcset="images/nyugalom/eliza-480.webp 480w, images/nyugalom/eliza.webp 549w" sizes="(max-width:640px) 256px, 356px" width="549" height="732" loading="lazy" decoding="async" alt="Sipos Eliza mesterkozmetikus portréja"></figure>
       <div><p class="overline">Ismerd meg a szakértődet</p><h2 id="about-title">Szia, Eliza vagyok,<br>a leendő kozmetikusod.</h2><p class="muted">A szépség mindig is az életem része volt. 2011-ben megnyitottam saját szalonomat, ahol azóta is azon dolgozom, hogy vendégeim bőre megkapja a neki megfelelő törődést.</p><p class="muted">A Beauty Academy szakmai trénereként és mesterkozmetikusként fontos számomra a folyamatos fejlődés. Nálam nincs sablonkezelés: megismerlek téged, a bőrödet és azt, amire valóban szükséged van.</p><p class="signature">Sipos Eliza</p><p class="credentials">Mesterkozmetikus · Az Eliza Beauty Salon alapítója</p></div>
     </div></section>
     <section class="section quotes" id="velemenyek" aria-labelledby="quotes-title"><div class="wrap">
-      <div class="section-intro center"><span class="rule-mark" aria-hidden="true"></span><h2 id="quotes-title">Jó érzés visszatérni.</h2><p class="muted">Vendégeim szavaival</p></div>
+      <div class="section-intro center"><h2 id="quotes-title">Jó érzés visszatérni.</h2><p class="muted">Vendégeim szavaival</p></div>
       <div class="quote-grid">
-        <blockquote class="quote"><span class="quote-mark" aria-hidden="true">„</span><p>„Korábbi rossz tapasztalatok miatt sokáig nem mertem kozmetikushoz járni, de ez az itt töltött első alkalmat követően megváltozott. A bőröm minden kezelés után szinte ragyog, remekül érzem magam, és Eliza segítségével sikerült kialakítanom a helyes, bőrtípusomnak megfelelő arcápolási rutint. Szívből ajánlom!”</p><cite>Fruzsi</cite></blockquote>
-        <blockquote class="quote"><span class="quote-mark" aria-hidden="true">„</span><p>„Eliza nagyon kedves, csupaszív kozmetikus, a kozmetika csodaszép, tiszta, hangulatos, mindig örömmel járok ide vissza. Legutóbb a 10 alkalmas arcfiatalító kezelést vettem igénybe, és az eredmény magáért beszél, azóta több pozitív visszajelzést is kaptam ismerőseimtől. Csak ajánlani tudom Elizát!”</p><cite>Magdi</cite></blockquote>
+        <blockquote class="quote"><p>„Korábbi rossz tapasztalatok miatt sokáig nem mertem kozmetikushoz járni, de ez az itt töltött első alkalmat követően megváltozott. A bőröm minden kezelés után szinte ragyog, remekül érzem magam, és Eliza segítségével sikerült kialakítanom a helyes, bőrtípusomnak megfelelő arcápolási rutint. Szívből ajánlom!”</p><cite>Fruzsi</cite></blockquote>
+        <blockquote class="quote"><p>„Eliza nagyon kedves, csupaszív kozmetikus, a kozmetika csodaszép, tiszta, hangulatos, mindig örömmel járok ide vissza. Legutóbb a 10 alkalmas arcfiatalító kezelést vettem igénybe, és az eredmény magáért beszél, azóta több pozitív visszajelzést is kaptam ismerőseimtől. Csak ajánlani tudom Elizát!”</p><cite>Magdi</cite></blockquote>
       </div>
     </div></section>
-    <section class="section process" id="folyamat" aria-labelledby="process-title"><div class="wrap">
-      <div class="process-head"><h2 id="process-title">Az első lépéstől<br>az otthoni törődésig.</h2><p>Nem kell előre tudnod, melyik kezelés való neked. Ebben is segítek.</p></div>
+    <section class="section process" id="folyamat" aria-labelledby="process-title"><div class="wrap process-timeline">
+      <div class="process-introduction"><h2 id="process-title">Az első lépéstől<br>az otthoni törődésig.</h2><img src="images/nyugalom/arcmasszazs.webp" srcset="images/nyugalom/arcmasszazs-480.webp 480w, images/nyugalom/arcmasszazs.webp 810w" sizes="(max-width:700px) 90vw, 35vw" width="810" height="1440" loading="lazy" alt="Nyugodt arcmasszázst bemutató hangulatkép"></div>
       <ol class="steps">
-        <li><span class="step-number" aria-hidden="true">1</span><h3>Időpont-egyeztetés</h3><p>Telefonon vagy az űrlapon keresztül kereshetsz. Hétfőtől péntekig 9:00 és 16:00 között, előre egyeztetett időpontban várlak.</p></li>
-        <li><span class="step-number" aria-hidden="true">2</span><h3>Felmérés és terv</h3><p>Megismerem a bőröd állapotát, arcápolási szokásaidat és termékeidet. Ezek alapján állítom össze a kezelési tervedet.</p></li>
-        <li><span class="step-number" aria-hidden="true">3</span><h3>A te kezelésed</h3><p>A személyre szabott terv alapján végzem el a kezelést, amelyet relaxáló arcmasszázs egészít ki.</p></li>
-        <li><span class="step-number" aria-hidden="true">4</span><h3>Tanácsok otthonra</h3><p>Gyakorlati tanácsokkal és személyre szabott termékajánlásokkal segítek az otthoni bőrápolási rutinod kialakításában.</p></li>
+        <li><span class="step-number" aria-hidden="true"><span>1</span></span><h3>Időpont-egyeztetés</h3><p>Telefonon vagy az űrlapon keresztül kereshetsz. Hétfőtől péntekig 9:00 és 16:00 között, előre egyeztetett időpontban várlak.</p></li>
+        <li><span class="step-number" aria-hidden="true"><span>2</span></span><h3>Felmérés és terv</h3><p>Megismerem a bőröd állapotát, arcápolási szokásaidat és termékeidet. Ezek alapján állítom össze a kezelési tervedet.</p></li>
+        <li><span class="step-number" aria-hidden="true"><span>3</span></span><h3>A te kezelésed</h3><p>A személyre szabott terv alapján végzem el a kezelést, amelyet relaxáló arcmasszázs egészít ki.</p></li>
+        <li><span class="step-number" aria-hidden="true"><span>4</span></span><h3>Tanácsok otthonra</h3><p>Gyakorlati tanácsokkal és személyre szabott termékajánlásokkal segítek az otthoni bőrápolási rutinod kialakításában.</p></li>
       </ol>
     </div></section>
-    <section class="invitation center" aria-labelledby="invite-title"><div class="wrap"><span class="rule-mark" aria-hidden="true"></span><h2 id="invite-title">Adj egy kis időt magadnak.<br>És figyelmet a bőrödnek.</h2><p>Ha úgy érzed, eljött az ideje a személyes törődésnek, szeretettel várlak. Kezdjük egy beszélgetéssel.</p><a href="#idopont" class="btn">Időpontot kérek</a></div></section>
+    <section class="invitation center" aria-labelledby="invite-title"><div class="wrap"><h2 id="invite-title">Adj egy kis időt magadnak.<br>És figyelmet a bőrödnek.</h2><p>Ha úgy érzed, eljött az ideje a személyes törődésnek, szeretettel várlak. Kezdjük egy beszélgetéssel.</p><a href="#idopont" class="btn">Időpontot kérek</a></div></section>
     <section class="section" id="gyik" aria-labelledby="faq-title"><div class="wrap faq-layout">
-      <div><h2 id="faq-title">Amit jó tudni<br>az első alkalom előtt</h2><p>Összegyűjtöttem a leggyakoribb kérdéseket, hogy nyugodtan érkezhess.</p><a href="#idopont" class="text-link">Más kérdésem van</a></div>
+      <div><h2 id="faq-title">Amit jó tudni<br>az első alkalom előtt</h2><p>Összegyűjtöttem a leggyakoribb kérdéseket, hogy nyugodtan érkezhess.</p><a href="#idopont" class="btn btn-outline faq-contact">Más kérdésem van</a></div>
       <div class="faq-list">
         <details><summary>Időpont nélkül is érkezhetek?</summary><p>Nem, a kozmetikámban kizárólag időpontra fogadok vendégeket.</p></details>
         <details><summary>Honnan tudjam, hogy melyik kezelés való nekem?</summary><p>Az első találkozás alkalmával a kezelés előtt diagnosztizálom a bőrödet, és felvázolom a kezelési tervet.</p></details>
@@ -140,7 +323,7 @@
     <section class="section newsletter" id="hirlevel" aria-labelledby="newsletter-title"><div class="wrap newsletter-layout">
       <div><span class="coming">Előkészületben</span><h2 id="newsletter-title">A gondoskodás<br>otthon folytatódik.</h2><p class="description">Az Arcápolási Kisokos hasznos tippekkel és szakértői tanácsokkal segít majd eligazodni a mindennapi bőrápolásban.</p><p class="description small">A kisokos és a hírlevél még készül. Az alábbi űrlap a tervezett feliratkozás bemutatója.</p></div>
       <form id="newsletter-form" onsubmit="return false" aria-label="Hírlevél-feliratkozás bemutató" autocomplete="off">
-        <p class="demo-note">Bemutató űrlap. Nem küld és nem ment adatokat; a kisokos még nem tölthető le. A kipróbáláshoz használj mintaadatokat.</p>
+        
         <div class="field"><label for="newsletter-name">Teljes név</label><input id="newsletter-name" name="name" type="text" required minlength="2" maxlength="120" placeholder="Minta Anna"></div>
         <div class="field"><label for="newsletter-email">E-mail cím</label><input id="newsletter-email" name="email" type="email" required maxlength="200" placeholder="anna@example.com"></div>
         <label class="check"><input type="checkbox" name="demo-consent" required><span>Elolvastam a <a href="#adatkezeles">prototípus adatkezelési megjegyzését</a>, és tudomásul veszem, hogy ez nem valódi feliratkozás.</span></label>
@@ -155,7 +338,7 @@
         <p class="contact-disclaimer">Prototípus: a telefon és az e-mail oktatási mintaadat. Éles használat előtt cserélendő.</p>
       </div>
       <form class="appointment-form" id="appointment-form" onsubmit="return false" aria-label="Időpontkérő bemutató" autocomplete="off">
-        <p class="demo-note">Ez bemutató űrlap: nem küld és nem ment adatokat. A valódi időpontot később személyesen egyeztetjük vissza; az űrlap nem automatikus foglalás.</p>
+        
         <div class="field"><label for="appointment-name">Teljes név</label><input id="appointment-name" type="text" name="name" required minlength="2" maxlength="120" placeholder="Minta Anna"></div>
         <div class="field"><label for="appointment-email">E-mail cím</label><input id="appointment-email" type="email" name="email" required maxlength="200" placeholder="anna@example.com"></div>
         <div class="field"><label for="appointment-message">Üzenet</label><textarea id="appointment-message" name="message" required minlength="10" maxlength="2000" rows="4" placeholder="Miben segíthetek? Írd meg, milyen kezelés érdekel, vagy mikor érnél rá."></textarea></div>
@@ -174,6 +357,13 @@
     <p id="adatkezeles" class="privacy-note" tabindex="-1">Prototípus adatkezelési megjegyzés: az űrlapok adatai nem kerülnek elküldésre vagy tartós mentésre. Valódi feliratkozás, letöltés és időpontkérés nem történik. A végleges adatkezelési tájékoztató a tényleges szolgáltatások beállításakor készül el.</p>
   </div></footer>
   <script>
+
+
+
+    const stickyHeader=document.querySelector('.site-header');
+    function updateHeaderBackground(){stickyHeader.classList.toggle('is-scrolled',window.scrollY>12);}
+    window.addEventListener('scroll',updateHeaderBackground,{passive:true});
+    updateHeaderBackground();
     const menuButton=document.querySelector('.menu-toggle');
     const mobileMenu=document.getElementById('mobile-menu');
     function closeMenu(){mobileMenu.hidden=true;menuButton.setAttribute('aria-expanded','false');menuButton.querySelector('.menu-label').textContent='Menü';}
