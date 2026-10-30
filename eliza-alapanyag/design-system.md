@@ -1,3 +1,5 @@
+> **Korábbi kiinduló arculati leírás.** A jóváhagyott főoldal alapján készült aktuális rendszer: [design-system.md](../design-system.md), vizuális mintákkal: [design-system.html](../design-system.html). Az aloldalak építésénél ezek az irányadók.
+
 # Eliza Beauty Salon – design system
 
 > **Opcionális alap.** Ha saját arculattal (színekkel, betűkkel, logóval) szeretnél dolgozni, nyugodtan válts. Ilyenkor a saját döntéseidet írd le egy ugyanilyen szerkezetű fájlba, és azt add oda az AI-nak.

@@ -179,3 +179,30 @@ A Hero, az Ismerd meg a szakértődet (`#eliza`) és a Jó érzés visszatérni 
 ### Animációk
 
 A felhasználó az animáció nélküli verziót választotta. Nincsenek belépő-, görgetési vagy hover-animációk. A menü görgetésre váltó háttere és az interaktív elemek működése megmarad, animált átmenet nélkül.
+
+
+### Az aloldalakhoz rögzített design system
+
+A jóváhagyott főoldal végleges stílusait a projekt gyökerében a `design-system.md` és az élő mintákat tartalmazó `design-system.html` rögzíti. Az aloldalakhoz ezek az irányadók, a korábbi opcionális arculati alap helyett.
+
+
+### Elkészült aloldalak — 2026. október 30.
+
+A jóváhagyott főoldal az `index.html`; a korábbi koncepcióválasztó a `koncepciok.html` fájlban maradt meg. Az eredeti három koncepció megmaradt referenciának.
+
+- `kezelesek.html`: Belico, Mesotica, további kezelések, eredményekre irányuló ápolás, elégedettségi garancia, a forrás szerinti három csomag és ár, vélemények, folyamat, időpontkérő.
+- `rolunk.html`: bemutatkozás, 2011/2018/2019 szakmai mérföldkövek, öt érték, szalonélmény és időpontkérő.
+- `kapcsolat.html`: elérhetőségek, nyitvatartás, egyetlen időpontkérő és GYIK.
+- `adatkezeles.html`: a bemutató működését leíró információs oldal; a végleges jogi tájékoztató továbbra is elkészítendő.
+
+A közös megjelenés és működés az `assets/site.css` és `assets/site.js` fájlokban található. Az aloldalak szakaszpaddingje minden nézetben 80 px; a főoldal jóváhagyott kivételei megmaradnak. A csomagválasztás üres üzenetmező esetén beírja a választást. Az űrlapok bemutatók, küldés és tartós tárolás nélkül. Animáció nincs.
+
+
+### Egységes Hero és menü az aloldalakon
+
+Minden aloldal a főoldal `hero hero-split wrap` komponensét használja: bal oldali szöveg, jobb oldali áttűnő kép, asztali nézetben a fejléc mögé futó fotó; mobilon szöveg után kép, felső áttűnéssel. A Hero alsó paddingje 20 px, felső paddingje a főoldaléval azonos. A menü kezdetben áttetsző, görgetéskor világos hátteret kap; mobilon a főoldallal megegyező hamburger és billentyűzetes működés érvényes. A Kapcsolat oldalon a Hero alatt egyetlen időpontkérő marad.
+
+
+### Kezelések oldal finomítása
+
+A Hero után közvetlenül a Belico, másodikként a Mesotica szakasz következik. A bőrigényeket és a további kezeléseket bemutató blokkok kéthasábos, mobilon egyhasábos kártyákat használnak. A garanciasáv alsó és a csomagszakasz felső paddingje 40 px. A csomagsorrend: Tini Anti-Akné (59 000 Ft), Anti-Age (79 000 Ft), Anti-Age Plus (99 000 Ft); a középső kártya rózsafa hátterű, világos szöveggel és gombbal.
