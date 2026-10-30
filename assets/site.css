@@ -300,3 +300,15 @@ body.subpage main#tartalom>#csomagok{padding-top:40px}
 .treatment-card-grid h3{font-size:23px}.treatment-card-grid p{font-size:15px}
 }
 @media(max-width:640px){#kezelesvalaszto .treatment-card-grid,#tovabbi-kezelesek .treatment-card-grid{grid-template-columns:1fr;gap:20px}}
+
+/* A főoldali gondoskodás listája ikonok nélkül. */
+#gondoskodas .reason{display:block}
+
+/* A Kezelések és Rólunk Hero alsó paddingje 20 px helyett 0 px. */
+body.subpage.page-kezelesek main#tartalom>.hero,body.subpage.page-rolunk main#tartalom>.hero{padding-bottom:0}
+/* A képre kerülő kompakt menü világos, a tömör fejlécen rózsafa. */
+@media(min-width:801px) and (max-width:900px){
+.page-kezelesek .site-header:not(.is-scrolled) .menu-toggle:not([aria-expanded="true"]),
+.page-kapcsolat .site-header:not(.is-scrolled) .menu-toggle:not([aria-expanded="true"]){color:var(--color-brand-bg)}
+}
+
