@@ -19,3 +19,8 @@ Az adatkezelési oldal és a lábléc tájékoztatása frissült a Kapcsolat űr
 A POST törzsét és a köszönőoldalra jutást elfogott, teljesen helyi hálózati kérésekkel teszteltük JavaScripttel és nélküle. Valódi beküldés nem történt. Az éles Netlify-felismerést és a beérkezett tesztüzenetet a fiókban lehet ellenőrizni; önmagában a köszönőoldal betöltése nem bizonyít beérkezést.
 
 Dokumentáció: https://docs.netlify.com/manage/forms/setup/
+
+
+## Egységes időpontkérők
+
+A főoldal, Kezelések és Rólunk oldal időpontkérője is ugyanazt az egységes `kapcsolat` Netlify-űrlapot használja, azonos mezőkkel és spamcsapdával. Csak a hírlevél maradt bemutató. A `site.js?v=forms-v2` hivatkozás a régi bemutató-kezelő böngészőcache-ét kerüli meg. A helyi file:// előnézet nem küld adatot; az éles Netlify-URL-en kell tesztelni.
