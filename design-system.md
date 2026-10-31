@@ -139,13 +139,13 @@ A lábléc külön komponens: asztalon 64/24 px, mobilon 48/24 px paddinggel.
 
 | Szerep | Aktuális webes kép | Kivágás |
 |---|---|---|
-| Hero | `images/nyugalom/kezeles.webp` | Magassághoz igazodó, 50% 64% |
-| Bőrfiatalítás | `images/nyugalom/borfiatalitas.webp` | 4:3; mobilon 3:2 |
-| Hidratálás | `images/nyugalom/hidratalas.webp` | 4:3; mobilon 3:2 |
-| Problémás bőr | `images/nyugalom/borallapot.webp` | 4:3; mobilon 3:2 |
-| Szakértelem | `images/nyugalom/arctervezes.webp` | Az új készlet 35 1.jpg képe; 1:1, mobilon 4:3; 50% 58% |
-| Eliza | `images/nyugalom/eliza.webp` | 3:4, keret nélkül |
-| Folyamat | `images/nyugalom/arcmasszazs.webp` | 4:5, legfeljebb 700 px-en 4:3 |
+| Hero | `public/images/nyugalom/kezeles.webp` | Magassághoz igazodó, 50% 64% |
+| Bőrfiatalítás | `public/images/nyugalom/borfiatalitas.webp` | 4:3; mobilon 3:2 |
+| Hidratálás | `public/images/nyugalom/hidratalas.webp` | 4:3; mobilon 3:2 |
+| Problémás bőr | `public/images/nyugalom/borallapot.webp` | 4:3; mobilon 3:2 |
+| Szakértelem | `public/images/nyugalom/arctervezes.webp` | Az új készlet 35 1.jpg képe; 1:1, mobilon 4:3; 50% 58% |
+| Eliza | `public/images/nyugalom/eliza.webp` | 3:4, keret nélkül |
+| Folyamat | `public/images/nyugalom/arcmasszazs.webp` | 4:5, legfeljebb 700 px-en 4:3 |
 
 Eliza portréjának jelenlegi megjelenítése: `filter: saturate(1.4) contrast(1.28) brightness(1.02); mix-blend-mode: multiply`. Ez kizárólag ehhez a portréhoz tartozik; nem általános fotófilter.
 
@@ -236,8 +236,8 @@ A szakaszok 80 px-es paddingje mobilon sem csökken; a rögzített 20 px-es kiv�
 
 - Jóváhagyott főoldal: [A nyugalom tere](koncepcio-1-a-nyugalom-tere.html).
 - Vizuális mintatár: [design-system.html](design-system.html).
-- Aktuális márkalogók: `images/logo.svg`, `images/logo-feher.svg`, `images/favicon.svg`.
-- Webes képek: `images/nyugalom/`; eredetiek: `eliza-alapanyag/Új_képek/`.
+- Aktuális márkalogók: `public/images/logo.svg`, `public/images/logo-feher.svg`, `public/images/favicon.svg`.
+- Webes képek: `public/images/nyugalom/`; eredetiek: `eliza-alapanyag/Új_képek/`.
 - A régi `eliza-alapanyag/design-system.md` kezdeti alap, nem írhatja felül ezt a főoldalból rögzített rendszert.
 
 A leírás a főoldal forrása és a Chrome-ban 1440, 870 és 375 px-en kiolvasott végleges stílusértékek alapján készült.

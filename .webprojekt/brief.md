@@ -206,3 +206,8 @@ Minden aloldal a főoldal `hero hero-split wrap` komponensét használja: bal ol
 ### Kezelések oldal finomítása
 
 A Hero után közvetlenül a Belico, másodikként a Mesotica szakasz következik. A bőrigényeket és a további kezeléseket bemutató blokkok kéthasábos, mobilon egyhasábos kártyákat használnak. A garanciasáv alsó és a csomagszakasz felső paddingje 40 px. A csomagsorrend: Tini Anti-Akné (59 000 Ft), Anti-Age (79 000 Ft), Anti-Age Plus (99 000 Ft); a középső kártya rózsafa hátterű, világos szöveggel és gombbal.
+
+
+### Publikálási mappa
+
+Az éles oldal belépési pontja `public/index.html`. A tárhely publish directory beállítása `public`. Az öt éles HTML-oldal, a közös CSS/JS, a logók, a favicon és a hivatkozott optimalizált WebP-k ebben a mappában találhatók. A koncepciók, design system dokumentumok, eredeti képek és a `.webprojekt/` munkaanyagok kívül maradnak. A gyökérben maradt HTML-referenciák a `public/` eszközeire hivatkoznak. Az űrlapok továbbra is bemutatók, az adatkezelési tájékoztató előkészítés alatt áll; a mappa összeállítása nem jelent éles publikálást.
