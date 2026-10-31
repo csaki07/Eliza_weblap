@@ -29,10 +29,13 @@
     "images/nyugalom/kezeles-320.webp",
     "images/nyugalom/kezeles-480.webp",
     "images/nyugalom/kezeles.webp",
+    "images/og-eliza.jpg",
     "index.html",
     "kapcsolat.html",
     "kezelesek.html",
-    "rolunk.html"
+    "robots.txt",
+    "rolunk.html",
+    "sitemap.xml"
   ],
-  "count": 31
+  "count": 34
 }
