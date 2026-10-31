@@ -43,3 +43,6 @@ Telepített skill: `C:/Users/HP/.codex/skills/vikingo-seo/SKILL.md` (v1.3.0). Ki
 Külső teendők: végleges saját domain megadása és az URL-ek frissítése; Search Console és sitemap-beküldés; valós vállalkozás esetén Google Business Profile; publikált változaton Rich Results Test és PageSpeed mérés. Nem hoztunk létre külső fiókot vagy új vállalkozási adatot.
 
 Az alapok nem garantálnak Google-helyezést, AI-válaszokban való megjelenést vagy FAQ-bővített találatot. A látható szövegek, képek és elrendezések változatlanok.
+
+
+Teljesítményfrissítés: a fontok immár a `public/fonts/` mappából töltődnek, a stíluslap az oldalak head részébe ágyazódik, a mobilos képek külön kivágásokat kapnak. Részletek és a frissítés menete: `PERFORMANCE.md`.

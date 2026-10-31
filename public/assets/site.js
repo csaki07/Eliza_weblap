@@ -3,7 +3,8 @@
 
 
     const stickyHeader=document.querySelector('.site-header');
-    function updateHeaderBackground(){stickyHeader.classList.toggle('is-scrolled',window.scrollY>12);}
+    let headerScrolled;
+    function updateHeaderBackground(){const next=window.scrollY>12;if(next!==headerScrolled){headerScrolled=next;stickyHeader.classList.toggle('is-scrolled',next);}}
     window.addEventListener('scroll',updateHeaderBackground,{passive:true});
     updateHeaderBackground();
     const menuButton=document.querySelector('.menu-toggle');
