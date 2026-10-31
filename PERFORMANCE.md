@@ -39,3 +39,12 @@ Referencia: [Google web.dev – LCP optimalizálása](https://web.dev/articles/o
 ## A második jelentés ellenőrzése
 
 A felhasználó által bemásolt, 2026. október 31. 18:10 CET időpontú mérés a `/kezelesek` oldalt vizsgálta: 94 pont, LCP 3,0 s. A nyilvános főoldalon és kezelési oldalon végzett közvetlen ellenőrzés még Google Fonts CSS-t, külső site.css-t és az optimalizált picture elemek hiányát mutatta. Tehát ez nem a helyben javított változat mérése. A Kezelések további két fotójához is készült 4:3 mobilos kivágás. A változások publikálása után mind a főoldalt, mind a /kezelesek URL-t újra kell mérni.
+
+
+## Speed Index második finomítás
+
+A megadott új PageSpeed mérés: teljesítmény 97, FCP 1,1 s, LCP 1,8 s, Speed Index 4,2 s, TBT 0, CLS 0. A fontok négy statikus, latin és magyar karaktereket együtt tartalmazó WOFF2 fájlra szűkültek: összesen 71 576 bájt, a korábbi 115 056 bájt helyett (kb. 38% csökkenés). Megszűnik a külön latin-ext kéréslánc. A betűcsaládok és súlyok változatlanok.
+
+A mobilképek 640 px köztes jelöltet is kaptak, 74-es WebP minőséggel. Új `v2` fájlneveik elkerülik az előző képek böngészőcache-ét. A képek cache-élettartama 30 nap. A jóváhagyott animációk változatlanok.
+
+A három helyi LCP-mérés eredménye zajos, nem mutatott egyértelmű további javulást; ebből nem állítunk Speed Index-nyereséget vagy új pontszámot. A változtatás a letöltési mennyiséget és a betűcsere késését célozza. Az új nyilvános Speed Index csak a deploy utáni PageSpeed-mérésből derül ki. A hosting által injektált Netlify HUD külön tényező marad.

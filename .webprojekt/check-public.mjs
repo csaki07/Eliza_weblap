@@ -6,7 +6,7 @@ const origin = process.argv[2] || 'http://127.0.0.1:8765';
 const browser = await chromium.launch({ executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe', headless:true });
 const report=[];
 try {
- for(const file of ['index.html','kezelesek.html','rolunk.html','kapcsolat.html','adatkezeles.html']) {
+ for(const file of ['index.html','kezelesek.html','rolunk.html','kapcsolat.html','adatkezeles.html','koszonjuk.html']) {
   const page=await browser.newPage();const errors=[];const failed=[];
   page.on('pageerror',e=>errors.push(e.message));
   page.on('response',r=>{if(r.url().startsWith(origin)&&r.status()>=400)failed.push(r.url());});
@@ -15,6 +15,7 @@ try {
   const sizes=[];
   for(const width of [1440,870,375]) {
    await page.setViewportSize({width,height:900});
+   await page.waitForTimeout(120);
    await page.waitForFunction(()=>[...document.images].every(i=>i.complete&&i.naturalWidth>0));
    await page.evaluate(async()=>{await Promise.all([...document.images].map(i=>i.decode().catch(()=>{})));});
    sizes.push(await page.evaluate(()=>({width:innerWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,brokenImages:[...document.images].filter(i=>!i.naturalWidth).map(i=>i.src),h1:document.querySelectorAll('h1').length})));

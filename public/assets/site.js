@@ -15,7 +15,7 @@
     document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!mobileMenu.hidden){closeMenu();menuButton.focus();}});
     window.matchMedia('(min-width:901px)').addEventListener('change',e=>{if(e.matches)closeMenu();});
     document.querySelectorAll('.treatment-choice').forEach(link=>link.addEventListener('click',()=>{const field=document.getElementById('appointment-message');if(field&&!field.value.trim())field.value='A következő kezelésről szeretnék egyeztetni: '+link.dataset.treatment+'.';}));
-    function setupDemoForm(formId,statusId,message){const form=document.getElementById(formId);const status=document.getElementById(statusId);if(!form||!status)return;form.addEventListener('input',()=>{status.textContent='';form.querySelectorAll('input[type=text],textarea').forEach(field=>field.setCustomValidity(''));});form.addEventListener('submit',event=>{event.preventDefault();const fields=[...form.querySelectorAll('input[type=text],textarea')];fields.forEach(field=>{const minimum=field.minLength>0?field.minLength:1;field.setCustomValidity(field.value.trim().length<minimum?'Kérlek, legalább '+minimum+' karaktert adj meg; a szóközök önmagukban nem elegendők.':'');});if(!form.reportValidity())return;status.textContent=message;});}
+    function setupDemoForm(formId,statusId,message){const form=document.getElementById(formId);const status=document.getElementById(statusId);if(!form||!status||form.hasAttribute('data-contact-form'))return;form.addEventListener('input',()=>{status.textContent='';form.querySelectorAll('input[type=text],textarea').forEach(field=>field.setCustomValidity(''));});form.addEventListener('submit',event=>{event.preventDefault();const fields=[...form.querySelectorAll('input[type=text],textarea')];fields.forEach(field=>{const minimum=field.minLength>0?field.minLength:1;field.setCustomValidity(field.value.trim().length<minimum?'Kérlek, legalább '+minimum+' karaktert adj meg; a szóközök önmagukban nem elegendők.':'');});if(!form.reportValidity())return;status.textContent=message;});}
     setupDemoForm('appointment-form','appointment-status','A bemutató ellenőrzése rendben. Az üzenet nem lett elküldve, és nem jött létre időpontkérés. Az adatok csak ezen az oldalon láthatók.');
     setupDemoForm('newsletter-form','newsletter-status','A bemutató ellenőrzése rendben. Nem történt feliratkozás vagy adatküldés. Az Arcápolási Kisokos még készül, ezért letöltés sem indult.');
   
@@ -78,4 +78,19 @@
   preference.addEventListener('change', event => {
     if (event.matches) { observer.disconnect(); active.forEach(animation => animation.cancel()); active.clear(); }
   });
+})();
+
+// A Netlify űrlap natív POST beküldést használ, nincs ál-sikerüzenet.
+(() => {
+ const form=document.querySelector('[data-contact-form]');
+ if(!form)return;
+ const fields=[...form.querySelectorAll('input[name="name"],textarea')];
+ form.addEventListener('input',()=>fields.forEach(field=>field.setCustomValidity('')));
+ form.addEventListener('submit',event=>{
+  fields.forEach(field=>field.setCustomValidity(field.value.trim().length<Math.max(field.minLength,1)?'Kérlek, töltsd ki ezt a mezőt érdemi szöveggel.':''));
+  if(!form.reportValidity()){event.preventDefault();return;}
+  if(location.protocol==='file:'||['localhost','127.0.0.1'].includes(location.hostname)){
+   event.preventDefault();document.getElementById('appointment-status').textContent='Helyi előnézet: az üzenet nem lett elküldve. Az űrlap a Netlifyra publikált oldalon használható.';
+  }
+ });
 })();
