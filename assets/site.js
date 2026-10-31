@@ -18,3 +18,30 @@
     setupDemoForm('appointment-form','appointment-status','A bemutató ellenőrzése rendben. Az üzenet nem lett elküldve, és nem jött létre időpontkérés. Az adatok csak ezen az oldalon láthatók.');
     setupDemoForm('newsletter-form','newsletter-status','A bemutató ellenőrzése rendben. Nem történt feliratkozás vagy adatküldés. Az Arcápolási Kisokos még készül, ezért letöltés sem indult.');
   
+// A számlálás egyszer indul, amikor a kártyák láthatóvá válnak.
+(() => {
+  const grid = document.querySelector('#eliza .salon-number-grid');
+  if (!grid || !('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const observer = new IntersectionObserver(entries => {
+    if (!entries.some(entry => entry.isIntersecting)) return;
+    observer.disconnect();
+    const counters = [...grid.querySelectorAll('dd')].map(element => {
+      const final = element.textContent.trim();
+      const span = document.createElement('span');
+      span.setAttribute('aria-hidden', 'true');
+      span.textContent = '0+';
+      element.setAttribute('aria-label', final);
+      element.replaceChildren(span);
+      return { span, target: Number(final.replace(/\D/g, '')), final };
+    });
+    const start = performance.now();
+    function frame(now) {
+      const progress = Math.min((now - start) / 1200, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      counters.forEach(({ span, target, final }) => { span.textContent = progress === 1 ? final : Math.floor(target * eased) + '+'; });
+      if (progress < 1) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }, { threshold: 0.5 });
+  observer.observe(grid);
+})();
