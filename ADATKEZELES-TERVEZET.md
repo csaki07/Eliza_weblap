@@ -11,7 +11,7 @@ Oktatási mintaprojekt, működő űrlapokkal.Az Eliza Beauty Salon ezen a webc�
 1. Kapcsolattartás és az adatkezelő
 
 
-Az oldal üzemeltetője kezeli a Netlify- és MailerLite-fiókot, valamint a beküldött adatokat. Teljes neve és postai kapcsolattartási címe még kiegészítendő. Adatkezelési kérdéssel, törlési kéréssel vagy hozzájárulásod visszavonásával a csaki07@gmail.com címen jelentkezhetsz. Az oldal címe: elizahomework.netlify.app.
+Az oldal üzemeltetője kezeli a Netlify- és MailerLite-fiókot, valamint a beküldött adatokat. Teljes neve és postai kapcsolattartási címe még kiegészítendő. Adatkezelési kérdéssel, törlési kéréssel vagy hozzájárulásod visszavonásával a kapcsolattartási elérhetőség még nincs megadva; ezt a tájékoztatót ezzel is ki kell egészíteni. Az oldal címe: elizahomework.netlify.app.
 
 
 2. Kapcsolati űrlapok
@@ -20,7 +20,7 @@ Az oldal üzemeltetője kezeli a Netlify- és MailerLite-fiókot, valamint a bek
 A főoldalon és az aloldalakon található kapcsolati űrlap a nevedet, e-mail-címedet és az üzenetedet kéri. A cél a megkeresésed fogadása és megválaszolása. Az oktatási oldalon a beküldés nem jelent tényleges kozmetikai időpontfoglalást.
 
 
-Az adatkezelés jogalapja az űrlap külön jelölőnégyzetével adott hozzájárulásod (GDPR 6. cikk (1) a)). Az adatközlés önkéntes; a szükséges mezők és a hozzájárulás nélkül az űrlap nem küldhető el. Az adatokat a Netlify Forms fogadja és tárolja, és a beküldésről a csaki07@gmail.com Gmail-postafiókba értesítés érkezik. A tájékoztató megismert változatának azonosítóját és a jelölőnégyzet értékét is továbbítja az űrlap.
+Az adatkezelés jogalapja az űrlap külön jelölőnégyzetével adott hozzájárulásod (GDPR 6. cikk (1) a)). Az adatközlés önkéntes; a szükséges mezők és a hozzájárulás nélkül az űrlap nem küldhető el. Az adatokat a Netlify Forms fogadja és tárolja, és a beküldésről az üzemeltető Gmail-postafiókjába értesítés érkezik. A tájékoztató megismert változatának azonosítóját és a jelölőnégyzet értékét is továbbítja az űrlap.
 
 
 A lezárt érdeklődések adatait legfeljebb 6 hónapig őrizzük meg; korábbi visszavonás vagy indokolt törlési kérés esetén előbb töröljük. Ez a Netlifyban és a kapcsolódó levelezésben tárolt példányokra egyaránt vonatkozik. A törlést az üzemeltető végzi, nem az oldal automatikus időzítője.
@@ -71,7 +71,7 @@ A weboldal saját kódjában nincs Google Analytics, Facebook Pixel vagy marketi
 Kérhetsz tájékoztatást és hozzáférést az adataidhoz, helyesbítést, a feltételek fennállásakor törlést vagy az adatkezelés korlátozását. Hozzájáruláson alapuló, automatizált adatkezelésnél az adathordozhatóság joga is megillethet. Jogos érdeken alapuló adatkezelés ellen tiltakozhatsz. A hozzájárulás bármikor visszavonható, ami a visszavonás előtti adatkezelés jogszerűségét nem érinti.
 
 
-A kérelmet a csaki07@gmail.com címen fogadjuk. Indokolatlan késedelem nélkül, főszabály szerint a beérkezéstől számított egy hónapon belül válaszolunk. Összetett vagy több kérelmet érintő esetben ez további két hónappal meghosszabbítható; ennek okáról az első hónapon belül tájékoztatást kell adni. A joggyakorlás főszabály szerint díjmentes. Kétség esetén kizárólag a személyazonosság ellenőrzéséhez szükséges további információ kérhető.
+Az adatkezelési kérelmek fogadására szolgáló elérhetőség még kiegészítendő. Indokolatlan késedelem nélkül, főszabály szerint a beérkezéstől számított egy hónapon belül válaszolunk. Összetett vagy több kérelmet érintő esetben ez további két hónappal meghosszabbítható; ennek okáról az első hónapon belül tájékoztatást kell adni. A joggyakorlás főszabály szerint díjmentes. Kétség esetén kizárólag a személyazonosság ellenőrzéséhez szükséges további információ kérhető.
 
 
 A weboldal nem végez a GDPR 22. cikke szerinti, joghatással vagy hasonlóan jelentős hatással járó automatizált döntéshozatalt. A hírlevélstatisztikák gyűjtését a 3. pont tartalmazza.
