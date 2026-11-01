@@ -356,3 +356,6 @@ body.subpage.page-kezelesek main#tartalom>.hero,body.subpage.page-rolunk main#ta
 @media(max-width:640px){#eliza .about-signoff .signature{font-size:30px}#eliza .about-signoff .about-more{padding:12px 18px;font-size:12px}}
 
 .newsletter-honeypot{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+
+/* Privacy notice */
+.privacy-draft{padding:24px;background:var(--color-brand-surface);border-radius:16px;margin:24px 0}.privacy-draft p{margin-top:12px}.legal-copy a,.check a{text-decoration:underline;text-underline-offset:3px}.legal-copy ul{padding-left:24px}.legal-copy li+li{margin-top:16px}.appointment-form .check{margin-bottom:24px}
