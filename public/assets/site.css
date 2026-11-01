@@ -354,3 +354,5 @@ body.subpage.page-kezelesek main#tartalom>.hero,body.subpage.page-rolunk main#ta
 #eliza .about-signoff{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 16px}
 #eliza .about-signoff .credentials{grid-column:1/-1;margin-top:0}
 @media(max-width:640px){#eliza .about-signoff .signature{font-size:30px}#eliza .about-signoff .about-more{padding:12px 18px;font-size:12px}}
+
+.newsletter-honeypot{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}

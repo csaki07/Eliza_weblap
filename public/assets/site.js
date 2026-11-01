@@ -17,7 +17,6 @@
     document.querySelectorAll('.treatment-choice').forEach(link=>link.addEventListener('click',()=>{const field=document.getElementById('appointment-message');if(field&&!field.value.trim())field.value='A következő kezelésről szeretnék egyeztetni: '+link.dataset.treatment+'.';}));
     function setupDemoForm(formId,statusId,message){const form=document.getElementById(formId);const status=document.getElementById(statusId);if(!form||!status||form.hasAttribute('data-contact-form'))return;form.addEventListener('input',()=>{status.textContent='';form.querySelectorAll('input[type=text],textarea').forEach(field=>field.setCustomValidity(''));});form.addEventListener('submit',event=>{event.preventDefault();const fields=[...form.querySelectorAll('input[type=text],textarea')];fields.forEach(field=>{const minimum=field.minLength>0?field.minLength:1;field.setCustomValidity(field.value.trim().length<minimum?'Kérlek, legalább '+minimum+' karaktert adj meg; a szóközök önmagukban nem elegendők.':'');});if(!form.reportValidity())return;status.textContent=message;});}
     setupDemoForm('appointment-form','appointment-status','A bemutató ellenőrzése rendben. Az üzenet nem lett elküldve, és nem jött létre időpontkérés. Az adatok csak ezen az oldalon láthatók.');
-    setupDemoForm('newsletter-form','newsletter-status','A bemutató ellenőrzése rendben. Nem történt feliratkozás vagy adatküldés. Az Arcápolási Kisokos még készül, ezért letöltés sem indult.');
   
 // A számlálás egyszer indul, amikor a kártyák láthatóvá válnak.
 (() => {
@@ -93,4 +92,25 @@
    event.preventDefault();document.getElementById('appointment-status').textContent='Helyi előnézet: az üzenet nem lett elküldve. Az űrlap a Netlifyra publikált oldalon használható.';
   }
  });
+})();
+
+// A hírlevél saját honeypot-kapun át a MailerLite HTML-űrlapjára kerül.
+(() => {
+ const form=document.querySelector('[data-mailerlite-form]');
+ if(!form)return;
+ const status=document.getElementById('newsletter-status');
+ form.addEventListener('submit',event=>{
+  status.textContent='';
+  if(form.elements.website.value.trim()){
+   event.preventDefault();status.textContent='A feliratkozás nem küldhető el. Kérlek, frissítsd az oldalt és próbáld újra.';return;
+  }
+  const name=form.elements['fields[name]'];
+  name.setCustomValidity(name.value.trim().length<2?'Kérlek, add meg a nevedet.':'');
+  if(!form.reportValidity()){event.preventDefault();return;}
+  if(location.protocol==='file:'||['localhost','127.0.0.1'].includes(location.hostname)){
+   event.preventDefault();status.textContent='Helyi előnézet: nem történt feliratkozás. A funkció az éles Netlify-oldalon használható.';return;
+  }
+  status.textContent='Feliratkozás elküldése…';
+ });
+ form.addEventListener('input',()=>{form.elements['fields[name]'].setCustomValidity('');status.textContent='';});
 })();

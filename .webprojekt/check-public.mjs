@@ -6,7 +6,7 @@ const origin = process.argv[2] || 'http://127.0.0.1:8765';
 const browser = await chromium.launch({ executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe', headless:true });
 const report=[];
 try {
- for(const file of ['index.html','kezelesek.html','rolunk.html','kapcsolat.html','adatkezeles.html','koszonjuk.html']) {
+ for(const file of ['index.html','kezelesek.html','rolunk.html','kapcsolat.html','adatkezeles.html','koszonjuk.html','hirlevel-koszonjuk.html']) {
   const page=await browser.newPage();const errors=[];const failed=[];
   page.on('pageerror',e=>errors.push(e.message));
   page.on('response',r=>{if(r.url().startsWith(origin)&&r.status()>=400)failed.push(r.url());});

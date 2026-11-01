@@ -12,6 +12,7 @@
     "fonts/jost-400-hu-v2.woff2",
     "fonts/jost-500-hu-v2.woff2",
     "fonts/jost-OFL.txt",
+    "hirlevel-koszonjuk.html",
     "images/favicon.svg",
     "images/logo-feher.svg",
     "images/logo.svg",
@@ -100,5 +101,9 @@
     "rolunk.html",
     "sitemap.xml"
   ],
-  "count": 97
+  "count": 98,
+  "server_files": [
+    "netlify.toml",
+    "netlify/functions/newsletter.mjs"
+  ]
 }
