@@ -94,7 +94,7 @@
   
 
     /* A fejlécgomb feliratának optikai függőleges középre igazítása. */
-    .header-inner>.btn{height:48px;min-height:48px;padding:4px 25px 0;line-height:1;align-items:center;justify-content:center}
+    .header-inner>.btn{height:48px;min-height:48px;padding:0 25px;line-height:1;align-items:center;justify-content:center}
 
     /* A fotó a nyitásban a keskenyebb, áttetsző menü mögé fut. */
     .site-header{background:transparent;border-bottom:1px solid transparent;transition:background-color .2s ease,border-color .2s ease}
@@ -131,7 +131,7 @@
     #folyamat{padding-top:56px;padding-bottom:64px}
     .header-inner{min-height:64px}
     .brand,.brand img{width:96px}.brand img{height:48px}
-    .header-inner>.btn{height:42px;min-height:42px;padding:4px 22px 0}
+    .header-inner>.btn{height:42px;min-height:42px;padding:0 22px}
     .hero-single-photo{margin-top:-64px}
     body .hero-single-photo,body .hero-single-photo img{border-top-right-radius:0!important}
     .hero-single-photo img{height:654px}
